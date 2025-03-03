@@ -1,8 +1,16 @@
 import { Sun, Moon } from "lucide-react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import portfolioContext from "../context/Context";
+import "./css/light.scss";
+import "./css/dark.scss";
+
 export default function ThemeToggle() {
   const { theme, setTheme } = useContext(portfolioContext);
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <>

@@ -10,6 +10,8 @@ import Home from "./components/Home.js";
 import Skills from "./components/Skills.js";
 import Achievements from "./components/Achievements.js";
 import Certifications from "./components/Certifications.js";
+import { useContext, useEffect, useState } from "react";
+import portfolioContext from "./context/Context.js";
 
 function App() {
   return (
