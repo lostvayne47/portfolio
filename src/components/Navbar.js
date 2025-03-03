@@ -1,17 +1,25 @@
 import React, { useContext } from "react";
 import portfolioContext from "../context/Context.js";
+import { useLocation, Link } from "react-router-dom";
 
 export default function Navbar() {
-  const { defaultState, setDefaultState } = useContext(portfolioContext);
+  const { defaultState } = useContext(portfolioContext);
+  console.log(defaultState);
+  const location = useLocation();
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+      className="navbar navbar-expand-lg bg-body-tertiary sticky-top"
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link
+          className={`navbar-brand ${
+            location.pathname === "/" ? "active" : ""
+          }`}
+          to="/"
+        >
           Portfolio
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,64 +33,96 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                Home
-              </a>
+            <li className="nav-item ">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/about" ? "active" : ""
+                }`}
+                to="/about"
+              >
+                About
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                About me
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/experience" ? "active" : ""
+                }`}
+                to="/experience"
+              >
                 Experience
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/projects" ? "active" : ""
+                }`}
+                to="/projects"
+              >
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="/"
+              <Link
+                className={`nav-link dropdown-toggle${
+                  location.pathname === "/technical" ? "active" : ""
+                }`}
+                to="/technical"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Technical
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <Link
+                    className={`dropdown-item ${
+                      location.pathname === "/skills" ? "active" : ""
+                    }`}
+                    to="/skills"
+                  >
                     Skills
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <Link
+                    className={`dropdown-item ${
+                      location.pathname === "/certifications" ? "active" : ""
+                    }`}
+                    to="/certifications"
+                  >
                     Certifications
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/">
+                  <Link
+                    className={`dropdown-item ${
+                      location.pathname === "/achievements" ? "active" : ""
+                    }`}
+                    to="/achievements"
+                  >
                     Achievements
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/contact" ? "active" : ""
+                }`}
+                to="/contact"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

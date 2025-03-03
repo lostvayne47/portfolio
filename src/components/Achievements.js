@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function About() {
+export default function Achievements() {
   return (
     <div className="container">
-      <h1>About</h1>
+      <h1>Achievements</h1>
     </div>
   );
 }
