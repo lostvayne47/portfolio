@@ -19,10 +19,12 @@
 /* Left Side: Text */
 .text-box {
   flex: 1;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
-
+.text-box p {
+  text-align: justify;
+}
 .text-box h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -37,9 +39,9 @@
 }
 
 .image-box img {
-  width: 100%;
+  width: 20rem;
   max-width: 600px;
-  height: auto;
+  height: 25rem;
   border-radius: 12px;
   object-fit: cover;
 

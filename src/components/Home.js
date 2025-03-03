@@ -1,22 +1,19 @@
 import React from "react";
 import "./css/Home.css";
-import backgroundImage from "../assets/background-image.jpeg";
+import profilePhoto from "../assets/profile-photo.jpeg";
+import { ABOUT_ME_TITLE, ABOUT_ME_DATA } from "../Constants";
 export default function Home() {
   return (
     <section className="landing-section">
       {/* Left Side: Text Content */}
       <div className="text-box">
-        <h1>Welcome to Our Platform</h1>
-        <p>
-          Experience a new way of interacting with technology. Our platform
-          offers cutting-edge solutions to make your life easier and more
-          efficient.
-        </p>
+        <h1>{ABOUT_ME_TITLE}</h1>
+        <p>{ABOUT_ME_DATA}</p>
       </div>
 
       {/* Right Side: Image */}
       <div className="image-box" loading="lazy">
-        <img src={backgroundImage} alt="Landing Background" />
+        <img src={profilePhoto} alt="Landing Background" />
       </div>
     </section>
   );
