@@ -1,0 +1,58 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox Container */
+.landing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+/* Left Side: Text */
+.text-box {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.text-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Right Side: Enlarged Image */
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 600px; /* Increased size */
+  height: auto;
+  border-radius: 12px; /* Optional rounded corners */
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box img {
+    max-width: 90%; /* Adjust image size for smaller screens */
+  }
+}

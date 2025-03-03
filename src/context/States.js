@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import portfolioContext from "./Context.js";
 
 export default function States(props) {
-  const [defaultState, setDefaultState] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   return (
-    <div>
-      <portfolioContext.Provider value={{ defaultState, setDefaultState }}>
+    <>
+      <portfolioContext.Provider value={{ theme, setTheme }}>
         {props.children}
       </portfolioContext.Provider>
-    </div>
+    </>
   );
 }

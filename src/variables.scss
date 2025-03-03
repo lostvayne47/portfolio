@@ -1,5 +1,19 @@
-$primary: #007bff; // Vibrant Blue
-$secondary: #00a878; // Teal Green
-$background: #f5f7fa; // Soft Grayish White
-$text: #333333; // Dark Gray
-$accent: #ffb400; // Warm Yellow
+:root {
+  --primary-bg: #007bff;
+  --secondary-bg: #00a878;
+  --primary-text: #333333;
+  --secondary-text: #f5f7fa;
+  --accent: #ffb400;
+  --border: #eaeaea;
+  --muted: #b0b0b0;
+}
+
+.dark-theme {
+  --primary-bg: #1e1e1e;
+  --secondary-bg: #252526;
+  --primary-text: #eaeaea;
+  --secondary-text: #b0b0b0;
+  --accent: #ffb400;
+  --border: #3a3a3a;
+  --muted: #6e6e6e;
+}
