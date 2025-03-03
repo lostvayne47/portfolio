@@ -11,12 +11,7 @@ export default function Navbar() {
       data-bs-theme="dark"
     >
       <div className="container-fluid">
-        <Link
-          className={`navbar-brand ${
-            location.pathname === "/" ? "active" : ""
-          }`}
-          to="/"
-        >
+        <Link className="navbar-brand" to="/">
           Portfolio
         </Link>
         <button
@@ -125,9 +120,9 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="mx-3">
-        <ThemeToggle />
+        <div>
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );
