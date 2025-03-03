@@ -17,7 +17,7 @@ function App() {
       <States>
         <BrowserRouter>
           <Navbar />
-          <div className="container">
+          <div>
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/about" element={<About />}></Route>
