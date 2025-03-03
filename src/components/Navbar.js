@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-      data-bs-theme="dark"
+      data-bs-theme={theme}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
