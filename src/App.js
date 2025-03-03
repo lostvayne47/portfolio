@@ -1,9 +1,12 @@
 import Navbar from "./components/Navbar.js";
+import States from "./context/States.js";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <States>
+        <Navbar />
+      </States>
     </>
   );
 }
