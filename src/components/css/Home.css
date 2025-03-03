@@ -20,6 +20,7 @@
 .text-box {
   flex: 1;
   font-size: 1.4rem;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -28,7 +29,7 @@
   margin-bottom: 15px;
 }
 
-/* Right Side: Enlarged Image */
+/* Right Side: Enlarged Image with Animation */
 .image-box {
   flex: 1;
   display: flex;
@@ -38,10 +39,24 @@
 
 .image-box img {
   width: 100%;
-  max-width: 600px; /* Increased size */
+  max-width: 600px;
   height: auto;
-  border-radius: 12px; /* Optional rounded corners */
+  border-radius: 12px;
   object-fit: cover;
+
+  /* Animation */
+  animation: bounceAnimation 1s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounceAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 /* Responsive Design */
@@ -52,6 +67,6 @@
   }
 
   .image-box img {
-    max-width: 90%; /* Adjust image size for smaller screens */
+    max-width: 90%;
   }
 }

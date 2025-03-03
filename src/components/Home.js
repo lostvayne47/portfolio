@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       {/* Right Side: Image */}
-      <div className="image-box">
+      <div className="image-box" loading="lazy">
         <img src={backgroundImage} alt="Landing Background" />
       </div>
     </section>
