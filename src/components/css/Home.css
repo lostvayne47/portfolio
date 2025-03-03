@@ -71,3 +71,17 @@
     max-width: 90%;
   }
 }
+
+.darkContainer {
+  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2NvazR1Zm4xYThvMTlxNnRsYmwxd3JxMWxqMzMzbmYwaWR3dXkyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IV7MOCfnm85iRa/giphy.gif");
+  background-size: cover; /* Adjusts the size to cover the whole screen */
+  background-position: center;
+  background-repeat: no-repeat; /* Prevents repetition */
+}
+
+.lightContainer {
+  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmg0c2V2YXk3bzBnZGhnNG8xNWF2dngwa3BoZ3R1cWk2d3YyaDc2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dAyD6PWoQRs40/giphy.gif");
+  background-size: cover; /* Adjusts the size to cover the whole screen */
+  background-position: center;
+  background-repeat: no-repeat; /* Prevents repetition */
+}

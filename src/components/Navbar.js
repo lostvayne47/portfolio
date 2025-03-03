@@ -7,7 +7,7 @@ export default function Navbar() {
   const location = useLocation();
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
       data-bs-theme="dark"
     >
       <div className="container-fluid">
