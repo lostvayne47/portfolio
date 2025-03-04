@@ -12,4 +12,16 @@ const getData = async () => {
   }
 };
 
+export const fetchLanguages = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Failed to fetch data");
+    const languagesData = await response.json();
+    return Object.keys(languagesData).join(", ");
+  } catch (error) {
+    console.error(error);
+    return ""; // Return an empty string if the API fails
+  }
+};
+
 export default getData;

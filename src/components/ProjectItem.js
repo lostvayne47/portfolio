@@ -32,6 +32,7 @@ export default function ProjectItem({ data }) {
           <Link size={20} />
         </a>
         {data.homepage ? (
+          // eslint-disable-next-line
           <a
             href={data.homepage}
             target="_blank"
@@ -41,8 +42,8 @@ export default function ProjectItem({ data }) {
           </a>
         ) : null}
       </div>
-      <div class="card-footer">
-        <small class="text-body-secondary">Languages</small>
+      <div className="card-footer">
+        <small className="text-body-secondary">Languages</small>
       </div>
     </div>
   );

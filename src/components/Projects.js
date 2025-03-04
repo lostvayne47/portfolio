@@ -25,10 +25,7 @@ export default function Projects() {
             <h1>NO PROJECTS YET</h1>
           ) : (
             <InfiniteScroll
-              dataLength={10} //This is important field to render the next data
-              next={() => {}}
-              hasMore={false}
-              loader={<h4>Loading...</h4>}
+              dataLength={githubData.length} //This is important field to render the next data
             >
               <div className="container ">
                 <div className="row gap-4 justify-content-center">
