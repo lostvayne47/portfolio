@@ -3,7 +3,7 @@ import portfolioContext from "../context/Context.js";
 import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle.js";
 export default function Navbar() {
-  const { theme, setTheme } = useContext(portfolioContext);
+  const { theme } = useContext(portfolioContext);
   const location = useLocation();
   return (
     <nav
