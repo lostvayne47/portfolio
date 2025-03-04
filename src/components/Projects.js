@@ -22,7 +22,7 @@ export default function Projects() {
           }}
         >
           {githubData.length === 0 ? (
-            <h1>NO PROJECTS YET</h1>
+            <h1 className="text-center">NO PROJECTS YET</h1>
           ) : (
             <InfiniteScroll
               dataLength={githubData.length} //This is important field to render the next data

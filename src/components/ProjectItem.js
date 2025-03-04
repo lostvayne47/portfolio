@@ -1,6 +1,6 @@
 import React from "react";
 import placeholder from "../assets/400x200.png";
-import { Link, Globe } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 export default function ProjectItem({ data }) {
   return (
     <div className="card" style={{ width: "18rem", padding: "15px" }}>
@@ -29,7 +29,7 @@ export default function ProjectItem({ data }) {
           {data.description}
         </p>
         <a href={data.url} className="btn btn-primary">
-          <Link size={20} />
+          <Github size={20} />
         </a>
         {data.homepage ? (
           // eslint-disable-next-line
