@@ -1,6 +1,6 @@
 import React from "react";
 import placeholder from "../assets/400x200.png";
-import { Link } from "lucide-react";
+import { Link, Globe } from "lucide-react";
 export default function ProjectItem({ data }) {
   return (
     <div className="card" style={{ width: "18rem", padding: "15px" }}>
@@ -29,8 +29,20 @@ export default function ProjectItem({ data }) {
           {data.description}
         </p>
         <a href={data.url} className="btn btn-primary">
-          Open Project <Link size={20} />
+          <Link size={20} />
         </a>
+        {data.homepage ? (
+          <a
+            href={data.homepage}
+            target="_blank"
+            className=" mx-3 btn btn-success"
+          >
+            <Globe size={20} />
+          </a>
+        ) : null}
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Languages</small>
       </div>
     </div>
   );
