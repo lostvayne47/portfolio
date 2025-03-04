@@ -1,9 +1,9 @@
 import React from "react";
-
+import placeholder from "../assets/400x200.png";
 export default function ProjectItem() {
   return (
-    <div className="card" style={{ width: "18rem" }}>
-      <img src="..." className="card-img-top" alt="..." />
+    <div className="card" style={{ width: "18rem", padding: "15px" }}>
+      <img src={placeholder} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">Card title</h5>
         <p className="card-text">

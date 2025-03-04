@@ -25,8 +25,8 @@ export default function Projects() {
             hasMore={false}
             loader={<h4>Loading...</h4>}
           >
-            <div className="container">
-              <div className="row gap-3 justify-content-center">
+            <div className="container ">
+              <div className="row gap-4 justify-content-center">
                 <ProjectItem />
                 <ProjectItem />
                 <ProjectItem />
