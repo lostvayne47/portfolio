@@ -10,22 +10,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
-  max-width: 1200px;
-  margin: auto;
-  gap: 30px;
+  padding: 35px;
+  max-width: 1000px;
+  width: 70%;
+  gap: 15px;
 
-  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-radius: 15px; /* Smooth edges */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px) brightness(1.05);
+  -webkit-backdrop-filter: blur(10px) brightness(1.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+
+  pointer-events: none;
 }
+
 /* Left Side: Text */
 .text-box {
   flex: 1;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .text-box p {
@@ -33,11 +38,11 @@
 }
 
 .text-box h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
-/* Right Side: Enlarged Image with Animation */
+/* Right Side: Image */
 .image-box {
   flex: 1;
   display: flex;
@@ -46,10 +51,10 @@
 }
 
 .image-box img {
-  width: 20rem;
-  max-width: 600px;
+  width: 16rem;
+  max-width: 500px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   object-fit: cover;
 
   /* Animation */
@@ -63,57 +68,37 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.04);
   }
 }
 
-/* Medium Screens (Tablets & Small Laptops) */
+/* 🔹 Medium Screens (Tablets & Small Laptops) */
 @media (max-width: 1024px) {
   .landing-section {
-    padding: 40px;
-    gap: 20px;
+    padding: 30px;
+    gap: 15px;
+    width: 90%;
   }
 
   .text-box {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .text-box h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .image-box img {
-    width: 18rem;
+    width: 15rem;
   }
 }
 
-/* Small Screens (Mobile Devices) */
+/* 🔹 Small Screens (Mobile Devices) */
 @media (max-width: 768px) {
   .landing-section {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
-  }
-
-  .text-box h1 {
-    font-size: 1.8rem;
-  }
-
-  .text-box p {
-    font-size: 0.9rem;
-  }
-
-  .image-box img {
-    width: 90%;
-    max-width: 350px;
-  }
-}
-
-/* Extra Small Screens (Very Small Phones) */
-@media (max-width: 480px) {
-  .landing-section {
-    padding: 20px;
-    gap: 15px;
+    padding: 25px;
   }
 
   .text-box h1 {
@@ -125,7 +110,29 @@
   }
 
   .image-box img {
-    width: 100%;
+    width: 85%;
     max-width: 300px;
+  }
+}
+
+/* 🔹 Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .landing-section {
+    padding: 18px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 1.3rem;
+  }
+
+  .text-box p {
+    font-size: 0.8rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    max-width: 250px;
   }
 }
