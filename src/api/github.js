@@ -27,21 +27,25 @@ export const fetchLanguages = async (url) => {
 };
 
 const getData = async () => {
-  const data = await getGithubData();
-  let filteredData = [];
-  data.map(async (i) => {
-    let projectLanguages = await fetchLanguages(i.languages_url);
-    // let projectLanguages = "projectLanguages";
-    filteredData.push({
-      id: i.id,
-      name: i.name,
-      description: i.description,
-      url: i.url,
-      homepage: i.homepage,
-      langauges: projectLanguages,
+  try {
+    const data = await getGithubData();
+    let filteredData = [];
+    data.map(async (i) => {
+      let projectLanguages = await fetchLanguages(i.languages_url);
+      // let projectLanguages = "projectLanguages";
+      filteredData.push({
+        id: i.id,
+        name: i.name,
+        description: i.description,
+        url: i.url,
+        homepage: i.homepage,
+        langauges: projectLanguages,
+      });
     });
-  });
-  return filteredData;
+    return filteredData;
+  } catch (e) {
+    console.log(e.message);
+  }
 };
 
 export default getData;
