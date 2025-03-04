@@ -1,11 +1,17 @@
 const githubUsername = "lostvayne47";
+const token = process.env.token;
 // const githubUsername = "tanish-cpu";
 
 const base_url = `https://api.github.com/users/${githubUsername}/repos`;
 
 const getGithubData = async () => {
   try {
-    const response = await fetch(base_url);
+    const response = await fetch(base_url, {
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
     if (!response.ok) throw new Error("Failed to fetch data");
     return await response.json();
   } catch (error) {
@@ -14,9 +20,14 @@ const getGithubData = async () => {
   }
 };
 
-export const fetchLanguages = async (url) => {
+const fetchLanguages = async (url) => {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
     if (!response.ok) throw new Error("Failed to fetch data");
     const languagesData = await response.json();
     return Object.keys(languagesData).join(", ");
