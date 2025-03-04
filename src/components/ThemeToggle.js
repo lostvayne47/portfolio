@@ -3,8 +3,6 @@ import { useContext, useEffect } from "react";
 import portfolioContext from "../context/Context";
 import "./css/light.scss";
 import "./css/dark.scss";
-import { useLocation } from "react-router";
-
 export default function ThemeToggle() {
   const { theme, setTheme } = useContext(portfolioContext);
   useEffect(() => {
