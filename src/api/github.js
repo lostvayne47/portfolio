@@ -1,9 +1,11 @@
 const githubUsername = "lostvayne47";
-const url = `https://api.github.com/users/${githubUsername}/repos`;
+// const githubUsername = "tanish-cpu";
 
-const getData = async () => {
+const base_url = `https://api.github.com/users/${githubUsername}/repos`;
+
+const getGithubData = async () => {
   try {
-    const response = await fetch(url);
+    const response = await fetch(base_url);
     if (!response.ok) throw new Error("Failed to fetch data");
     return await response.json();
   } catch (error) {
@@ -22,6 +24,24 @@ export const fetchLanguages = async (url) => {
     console.error(error);
     return ""; // Return an empty string if the API fails
   }
+};
+
+const getData = async () => {
+  const data = await getGithubData();
+  let filteredData = [];
+  data.map(async (i) => {
+    let projectLanguages = await fetchLanguages(i.languages_url);
+    // let projectLanguages = "projectLanguages";
+    filteredData.push({
+      id: i.id,
+      name: i.name,
+      description: i.description,
+      url: i.url,
+      homepage: i.homepage,
+      langauges: projectLanguages,
+    });
+  });
+  return filteredData;
 };
 
 export default getData;

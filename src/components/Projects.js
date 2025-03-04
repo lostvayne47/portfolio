@@ -30,7 +30,7 @@ export default function Projects() {
               <div className="container ">
                 <div className="row gap-4 justify-content-center">
                   {githubData.map((data) => {
-                    return <ProjectItem data={data} />;
+                    return <ProjectItem key={data.id} data={data} />;
                   })}
                 </div>
               </div>

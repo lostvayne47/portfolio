@@ -43,7 +43,7 @@ export default function ProjectItem({ data }) {
         ) : null}
       </div>
       <div className="card-footer">
-        <small className="text-body-secondary">Languages</small>
+        <small className="text-body-secondary">{data.langauges}</small>
       </div>
     </div>
   );
