@@ -7,9 +7,16 @@ export default function States(props) {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [githubData, setGithubData] = useState([]);
 
+  const fetchGithub = async () => {
+    console.log("Fetching GitHub Data...");
+    const data = await getData();
+    console.log("Received Data");
+    setGithubData(data);
+  };
+
   useEffect(() => {
     //CALL GITHUB API AND INITIALISE OBJECT
-    setGithubData(getData());
+    fetchGithub();
   }, []);
 
   return (
