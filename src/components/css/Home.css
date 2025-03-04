@@ -14,17 +14,24 @@
   max-width: 1200px;
   margin: auto;
   gap: 30px;
-}
 
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 15px; /* Smooth edges */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
 /* Left Side: Text */
 .text-box {
   flex: 1;
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .text-box p {
   text-align: justify;
 }
+
 .text-box h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -41,7 +48,7 @@
 .image-box img {
   width: 20rem;
   max-width: 600px;
-  height: 25rem;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
 
@@ -60,28 +67,65 @@
   }
 }
 
-/* Responsive Design */
+/* Medium Screens (Tablets & Small Laptops) */
+@media (max-width: 1024px) {
+  .landing-section {
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .text-box {
+    font-size: 0.95rem;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+
+  .image-box img {
+    width: 18rem;
+  }
+}
+
+/* Small Screens (Mobile Devices) */
 @media (max-width: 768px) {
   .landing-section {
     flex-direction: column;
     text-align: center;
+    padding: 30px;
+  }
+
+  .text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
   }
 
   .image-box img {
-    max-width: 90%;
+    width: 90%;
+    max-width: 350px;
   }
 }
 
-.darkContainer {
-  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2NvazR1Zm4xYThvMTlxNnRsYmwxd3JxMWxqMzMzbmYwaWR3dXkyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IV7MOCfnm85iRa/giphy.gif");
-  background-size: cover; /* Adjusts the size to cover the whole screen */
-  background-position: center;
-  background-repeat: no-repeat; /* Prevents repetition */
-}
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .landing-section {
+    padding: 20px;
+    gap: 15px;
+  }
 
-.lightContainer {
-  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmg0c2V2YXk3bzBnZGhnNG8xNWF2dngwa3BoZ3R1cWk2d3YyaDc2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dAyD6PWoQRs40/giphy.gif");
-  background-size: cover; /* Adjusts the size to cover the whole screen */
-  background-position: center;
-  background-repeat: no-repeat; /* Prevents repetition */
+  .text-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-box p {
+    font-size: 0.85rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
