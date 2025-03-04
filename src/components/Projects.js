@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProjectItem from "./ProjectItem.js";
 import InfiniteScroll from "react-infinite-scroll-component";
+import portfolioContext from "../context/Context.js";
 
 export default function Projects() {
+  const { githubData } = useContext(portfolioContext);
   return (
     <>
       <div
@@ -19,33 +21,24 @@ export default function Projects() {
             padding: "15px",
           }}
         >
-          <InfiniteScroll
-            dataLength={10} //This is important field to render the next data
-            next={() => {}}
-            hasMore={false}
-            loader={<h4>Loading...</h4>}
-          >
-            <div className="container ">
-              <div className="row gap-4 justify-content-center">
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
+          {githubData.length === 0 ? (
+            <h1>NO PROJECTS YET</h1>
+          ) : (
+            <InfiniteScroll
+              dataLength={10} //This is important field to render the next data
+              next={() => {}}
+              hasMore={false}
+              loader={<h4>Loading...</h4>}
+            >
+              <div className="container ">
+                <div className="row gap-4 justify-content-center">
+                  {githubData.map((data) => {
+                    return <ProjectItem data={data} />;
+                  })}
+                </div>
               </div>
-            </div>
-          </InfiniteScroll>
+            </InfiniteScroll>
+          )}
         </div>
       </div>
     </>
