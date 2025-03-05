@@ -38,22 +38,26 @@ const fetchLanguages = async (url) => {
 const getData = async () => {
   try {
     const data = await getGithubData();
-    let filteredData = [];
-    data.map(async (i) => {
-      let projectLanguages = await fetchLanguages(i.languages_url);
-      // let projectLanguages = "projectLanguages";
-      filteredData.push({
-        id: i.id,
-        name: i.name,
-        description: i.description,
-        url: i.url,
-        homepage: i.homepage,
-        langauges: projectLanguages,
-      });
-    });
-    return filteredData;
+
+    // Wait for all fetchLanguages calls to resolve before proceeding
+    const filteredData = await Promise.all(
+      data.map(async (i) => {
+        const projectLanguages = await fetchLanguages(i.languages_url);
+        return {
+          id: i.id,
+          name: i.name,
+          description: i.description,
+          url: i.url,
+          homepage: i.homepage,
+          languages: projectLanguages,
+        };
+      })
+    );
+
+    return filteredData; // Correctly returning data after processing
   } catch (e) {
-    console.log(e.message);
+    console.error("Error fetching GitHub data:", e.message);
+    return []; // Return empty array in case of failure
   }
 };
 

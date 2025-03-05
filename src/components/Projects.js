@@ -5,21 +5,15 @@ import portfolioContext from "../context/Context.js";
 import { Loader, RefreshCcw } from "lucide-react";
 
 export default function Projects() {
-  const { githubData, loading, theme } = useContext(portfolioContext);
+  const { githubData, loading } = useContext(portfolioContext);
   const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
 
-  //TODO: Component is rendered before updated state is reflected and does not cause re-render
-  //So on page reload user has to click retry button
   const handleRetry = () => {
     if (retryKey) {
       console.log("Retrying");
     }
     setRetryKey((prev) => prev + 1); // 🔄 Increment key to re-render component
   };
-
-  useEffect(() => {
-    if (githubData.length === 0) handleRetry();
-  }, [githubData]);
 
   if (loading) return <Loader />;
   return (
@@ -29,7 +23,7 @@ export default function Projects() {
         style={{ height: "100%" }}
       >
         <h1 className="text-center" style={{ marginTop: "10px" }}>
-          GitHub Projects
+          Feel free to explore my work!
         </h1>
         <div
           className="container custom-scrollbar "

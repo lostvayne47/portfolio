@@ -50,7 +50,7 @@ export default function ProjectItem({ data }) {
         ) : null}
       </div>
       <div className="border-top">
-        <small className="text-bold">{data?.langauges || "Languages"}</small>
+        <small className="dt">{data?.languages || "Languages"}</small>
       </div>
     </div>
   );
