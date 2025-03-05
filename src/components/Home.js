@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <ParticleCanvas />
       <div className="container d-flex justify-content-center align-items-center">
-        <section className="landing-section">
+        <section className="landing-section glass-effect">
           {/* Left Side: Text Content */}
           <div className="text-box">
             <h1 className="my-4">{ABOUT_ME_TITLE}</h1>

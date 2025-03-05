@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import placeholder from "../assets/400x200.png";
 import { Github, Globe } from "lucide-react";
+import portfolioContext from "../context/Context";
 export default function ProjectItem({ data }) {
+  const { theme } = useContext(portfolioContext);
   return (
-    <div className="card" style={{ width: "18rem", padding: "15px" }}>
+    <div
+      className={`card glass-effect text-${
+        theme === "dark" ? "light" : "dark"
+      }`}
+      style={{ width: "18rem", padding: "15px" }}
+    >
       <img
         src={placeholder}
         className="card-img-top"
@@ -43,9 +50,7 @@ export default function ProjectItem({ data }) {
         ) : null}
       </div>
       <div className="border-top">
-        <small className="text-body-secondary">
-          {data?.langauges || "Languages"}
-        </small>
+        <small className="text-bold">{data?.langauges || "Languages"}</small>
       </div>
     </div>
   );
