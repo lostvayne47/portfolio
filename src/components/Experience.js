@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Briefcase, Star } from "lucide-react";
+import { Briefcase, Star, School, GraduationCap } from "lucide-react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -157,8 +157,71 @@ export default function Experience() {
             </li>
           </ul>
         </VerticalTimelineElement>
+
         <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+          className="vertical-timeline-element--education"
+          dateClassName={dateClassName}
+          date="Aug 2019 - May 2023"
+          contentStyle={{ background: "rgb(40, 189, 27)", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  rgb(40, 189, 27)" }}
+          iconStyle={{ background: "rgb(40, 189, 27)", color: "#fff" }}
+          icon={<GraduationCap />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            B.Tech, Instrumentation and Control
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Vishwakarma Institute of Technology
+          </h4>
+          <p>
+            Graduated with <b>CGPA 9.65</b> with an elective of Artifical
+            Intelligence and Machine learning.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="Apr 2017 - Mar 2019"
+          dateClassName={dateClassName}
+          contentStyle={{ background: "rgb(44, 47, 207)", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  rgb(44, 47, 207)" }}
+          iconStyle={{ background: "rgb(44, 47, 207)", color: "#fff" }}
+          icon={<School />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            High School - 12th Science
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Indira National School (CBSE)
+          </h4>
+          <p>
+            Passed with <b>92.6%</b> Ranked 3rd in school.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="Apr 2017 - Mar 2019"
+          dateClassName={dateClassName}
+          contentStyle={{ background: "rgb(158, 37, 189)", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  rgb(158, 37, 189)" }}
+          iconStyle={{ background: "rgb(158, 37, 189)", color: "#fff" }}
+          icon={<School />}
+        >
+          <h3 className="vertical-timeline-element-title">School - 10th</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Indira National School (CBSE)
+          </h4>
+          <p>
+            Passed with <b>94%</b>
+            <br />
+            Represented and lead the football team at various state level
+            tournaments.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          iconStyle={{ background: "rgb(221, 224, 42)", color: "#fff" }}
           icon={<Star />}
         />
       </VerticalTimeline>
