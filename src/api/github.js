@@ -1,11 +1,10 @@
 const githubUsername = process.env.REACT_APP_GITHUB_USERNAME;
 const token = process.env.REACT_APP_GITHUB_PAT;
-
-const base_url = `https://api.github.com/users/${githubUsername}/repos`;
+const apiUrl = process.env.REACT_APP_GITHUB_API_URL;
 
 const getGithubData = async () => {
   try {
-    const response = await fetch(base_url, {
+    const response = await fetch(`${apiUrl}/users/${githubUsername}/repos`, {
       headers: {
         Authorization: `token ${token}`,
         Accept: "application/vnd.github.v3+json",
