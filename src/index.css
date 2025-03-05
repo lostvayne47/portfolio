@@ -16,6 +16,10 @@ code {
 
 .active {
   transform: translateY(-5px);
+  font-weight: bold; /* Make text bold */
+  color: #fff; /* Ensure text is visible */
+  text-shadow: 0 0 15px var(--accent); /* Strong glowing effect */
+  transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
 }
 
 button {
@@ -60,4 +64,9 @@ button {
 /* For Chrome, Safari, and Edge */
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+/* When navbar is toggled open in small screens */
+.navbar-toggler[aria-expanded="true"] + .collapse {
+  background: var(--primary-bg) !important; /* Bootstrap primary color */
 }

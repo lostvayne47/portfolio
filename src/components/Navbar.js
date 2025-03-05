@@ -6,10 +6,7 @@ export default function Navbar() {
   const { theme } = useContext(portfolioContext);
   const location = useLocation();
   return (
-    <nav
-      className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-      data-bs-theme={theme}
-    >
+    <nav className="navbar navbar-expand-lg fixed-top" data-bs-theme={theme}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Portfolio
