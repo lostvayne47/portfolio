@@ -1,6 +1,5 @@
 const githubUsername = "lostvayne47";
-const token = process.env.token;
-// const githubUsername = "tanish-cpu";
+const token = process.env.REACT_APP_GITHUB_PAT;
 
 const base_url = `https://api.github.com/users/${githubUsername}/repos`;
 
