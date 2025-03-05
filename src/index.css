@@ -51,3 +51,14 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
+
+.scroll-container {
+  overflow: auto; /* Keeps scrolling functional */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE & Edge */
+}
+
+/* For Chrome, Safari, and Edge */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
