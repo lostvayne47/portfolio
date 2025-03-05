@@ -9,6 +9,9 @@ export default function Projects() {
   const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
 
   const handleRetry = () => {
+    if (retryKey) {
+      console.log("Retrying");
+    }
     setRetryKey((prev) => prev + 1); // 🔄 Increment key to re-render component
   };
 
