@@ -8,6 +8,8 @@ export default function Projects() {
   const { githubData, loading } = useContext(portfolioContext);
   const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
 
+  //TODO: Component is rendered before updated state is reflected and does not cause re-render
+  //So on page reload user has to click retry button
   const handleRetry = () => {
     if (retryKey) {
       console.log("Retrying");
