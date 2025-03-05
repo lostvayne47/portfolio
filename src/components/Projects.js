@@ -1,10 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem.js";
 import InfiniteScroll from "react-infinite-scroll-component";
 import portfolioContext from "../context/Context.js";
+import { Loader, RefreshCcw } from "lucide-react";
 
 export default function Projects() {
-  const { githubData } = useContext(portfolioContext);
+  const { githubData, loading } = useContext(portfolioContext);
+  const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
+
+  const handleRetry = () => {
+    setRetryKey((prev) => prev + 1); // 🔄 Increment key to re-render component
+  };
+
+  useEffect(() => {
+    if (githubData.length === 0) handleRetry();
+  }, [githubData]);
+
+  if (loading) return <Loader />;
   return (
     <>
       <div
@@ -22,7 +34,12 @@ export default function Projects() {
           }}
         >
           {githubData.length === 0 ? (
-            <h1 className="text-center">NO PROJECTS YET</h1>
+            <>
+              <h2 className="text-center">NO PROJECTS YET</h2>
+              <h3 className="text-center" onClick={handleRetry}>
+                <RefreshCcw />
+              </h3>
+            </>
           ) : (
             <InfiniteScroll
               dataLength={githubData.length} //This is important field to render the next data
