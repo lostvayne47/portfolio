@@ -15,7 +15,7 @@ export default function ProjectItem({ data }) {
           className="card-title"
           style={{ overflow: "hidden", height: "3rem" }}
         >
-          {data.name.split("-").join(" ")}
+          {data?.name?.split("-").join(" ")}
         </h5>
         <p
           className="card-text"
@@ -26,15 +26,15 @@ export default function ProjectItem({ data }) {
             fontSize: "15px",
           }}
         >
-          {data.description}
+          {data?.description}
         </p>
         <a href={data.url} className="btn btn-primary">
           <Github size={20} />
         </a>
-        {data.homepage ? (
+        {data?.homepage ? (
           // eslint-disable-next-line
           <a
-            href={data.homepage}
+            href={data?.homepage}
             target="_blank"
             className=" mx-3 btn btn-success"
           >
@@ -43,7 +43,7 @@ export default function ProjectItem({ data }) {
         ) : null}
       </div>
       <div className="card-footer">
-        <small className="text-body-secondary">{data.langauges}</small>
+        <small className="text-body-secondary">{data?.langauges}</small>
       </div>
     </div>
   );
