@@ -35,7 +35,13 @@ export default function ProjectItem({ data }) {
         >
           {data?.description}
         </p>
-        <a href={data.url} className="btn btn-primary">
+
+        <a
+          href={data.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+        >
           <Github size={20} />
         </a>
         {data?.homepage ? (

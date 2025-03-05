@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import ProjectItem from "./ProjectItem.js";
 import InfiniteScroll from "react-infinite-scroll-component";
 import portfolioContext from "../context/Context.js";

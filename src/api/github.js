@@ -47,7 +47,7 @@ const getData = async () => {
           id: i.id,
           name: i.name,
           description: i.description,
-          url: i.url,
+          url: i.html_url,
           homepage: i.homepage,
           languages: projectLanguages,
         };
