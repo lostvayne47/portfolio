@@ -26,6 +26,10 @@ export default function Experience() {
           dateClassName={dateClassName}
           iconStyle={{ background: "rgb(243, 33, 44)", color: "#fff" }}
           icon={<Briefcase />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">
             Software Engineer 1
@@ -71,6 +75,7 @@ export default function Experience() {
             </li>
           </ul>
         </VerticalTimelineElement>
+
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
@@ -79,6 +84,10 @@ export default function Experience() {
           dateClassName={dateClassName}
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<Briefcase />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">
             Process Instrumentation Intern
@@ -125,6 +134,10 @@ export default function Experience() {
           dateClassName={dateClassName}
           iconStyle={{ background: "rgb(250, 126, 54)", color: "#fff" }}
           icon={<Briefcase />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">Technical Intern</h3>
           <h4 className="vertical-timeline-element-subtitle">
@@ -166,6 +179,10 @@ export default function Experience() {
           contentArrowStyle={{ borderRight: "7px solid  rgb(40, 189, 27)" }}
           iconStyle={{ background: "rgb(40, 189, 27)", color: "#fff" }}
           icon={<GraduationCap />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">
             B.Tech, Instrumentation and Control
@@ -187,6 +204,10 @@ export default function Experience() {
           contentArrowStyle={{ borderRight: "7px solid  rgb(44, 47, 207)" }}
           iconStyle={{ background: "rgb(44, 47, 207)", color: "#fff" }}
           icon={<School />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">
             High School - 12th Science
@@ -207,6 +228,10 @@ export default function Experience() {
           contentArrowStyle={{ borderRight: "7px solid  rgb(158, 37, 189)" }}
           iconStyle={{ background: "rgb(158, 37, 189)", color: "#fff" }}
           icon={<School />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         >
           <h3 className="vertical-timeline-element-title">School - 10th</h3>
           <h4 className="vertical-timeline-element-subtitle">
@@ -223,6 +248,10 @@ export default function Experience() {
         <VerticalTimelineElement
           iconStyle={{ background: "rgb(221, 224, 42)", color: "#fff" }}
           icon={<Star />}
+          intersectionObserverProps={{
+            rootMargin: "0px 0px -40px 0px",
+            triggerOnce: false,
+          }}
         />
       </VerticalTimeline>
     </div>
