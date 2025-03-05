@@ -26,3 +26,18 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 }
+
+.custom-scrollbar {
+  overflow-y: auto;
+  max-height: 400px; /* Adjust height */
+}
+
+/* Apply scrollbar styles only inside .custom-scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2898a7;
+  border-radius: 20px; /* Extra rounded */
+}

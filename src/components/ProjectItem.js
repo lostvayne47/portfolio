@@ -42,8 +42,10 @@ export default function ProjectItem({ data }) {
           </a>
         ) : null}
       </div>
-      <div className="card-footer">
-        <small className="text-body-secondary">{data?.langauges}</small>
+      <div className="border-top">
+        <small className="text-body-secondary">
+          {data?.langauges || "Languages"}
+        </small>
       </div>
     </div>
   );

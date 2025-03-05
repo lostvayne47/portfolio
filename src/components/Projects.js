@@ -5,7 +5,7 @@ import portfolioContext from "../context/Context.js";
 import { Loader, RefreshCcw } from "lucide-react";
 
 export default function Projects() {
-  const { githubData, loading } = useContext(portfolioContext);
+  const { githubData, loading, theme } = useContext(portfolioContext);
   const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
 
   //TODO: Component is rendered before updated state is reflected and does not cause re-render
@@ -32,6 +32,7 @@ export default function Projects() {
           GitHub Projects
         </h1>
         <div
+          className="container custom-scrollbar "
           style={{
             maxHeight: "85%",
             overflowY: "auto",
