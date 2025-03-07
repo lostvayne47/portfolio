@@ -66,7 +66,8 @@ button {
   display: none;
 }
 
-/* When navbar is toggled open in small screens */
-.navbar-toggler[aria-expanded="true"] + .collapse {
-  background: var(--primary-bg) !important; /* Bootstrap primary color */
+@media (max-width: 1024px) {
+  .navbar {
+    background: var(--primary-bg) !important; /* Bootstrap primary color */
+  }
 }
