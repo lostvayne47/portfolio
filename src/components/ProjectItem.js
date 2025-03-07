@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import placeholder from "../assets/400x200.png";
+import placeholder from "../assets/techPlaceholder.jpeg";
 import { Github, Globe } from "lucide-react";
 import portfolioContext from "../context/Context";
 export default function ProjectItem({ data }) {
@@ -15,7 +15,7 @@ export default function ProjectItem({ data }) {
         src={placeholder}
         className="card-img-top"
         alt="..."
-        style={{ width: "100%", height: "30%" }}
+        style={{ width: "100%", height: "40%" }}
       />
       <div className="card-body">
         <h5
