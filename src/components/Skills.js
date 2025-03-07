@@ -24,8 +24,12 @@ export default function Skills() {
             (skill) => skill.type === category
           );
           return (
-            <div key={category} className="mb-4">
-              <h3 className="text-center">{category}</h3>
+            <div
+              key={category}
+              className="mb-4 rounded p-3"
+              style={{ border: "3px solid var(--border)" }}
+            >
+              <h4 className="text-center mb-3">{category}</h4>
               <div
                 className="d-flex justify-content-evenly gap-3 flex-wrap "
                 style={{ width: "100%" }}

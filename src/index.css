@@ -71,3 +71,10 @@ button {
     background: var(--primary-bg) !important; /* Bootstrap primary color */
   }
 }
+
+.enlarge {
+  cursor: pointer;
+}
+.enlarge:hover {
+  transform: scale(1.15);
+}

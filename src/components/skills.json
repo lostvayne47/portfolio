@@ -23,8 +23,5 @@
 
   { "name": "AWS", "type": "Cloud & DevOps" },
   { "name": "Azure", "type": "Cloud & DevOps" },
-  {
-    "name": "Docker",
-    "type": "Cloud & DevOps"
-  }
+  { "name": "Docker", "type": "Cloud & DevOps" }
 ]
