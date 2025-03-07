@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import portfolioContext from "../context/Context";
 
-export default function SkillCard({ title, type }) {
+export default function SkillCard({ title }) {
   // Dynamically import all images from the assets folder
   const images = {};
   const context = require.context("../assets", false, /\.(png|jpe?g|svg)$/);
@@ -11,7 +11,7 @@ export default function SkillCard({ title, type }) {
   });
   const { theme } = useContext(portfolioContext);
   return (
-    <div className="col">
+    <div>
       <div
         className={`card glass-effect text-${
           theme === "dark" ? "light" : "dark"
@@ -41,17 +41,12 @@ export default function SkillCard({ title, type }) {
                 maxWidth: "100%",
                 maxHeight: "100%",
                 objectFit: "contain",
+                padding: "30px",
               }}
             />
           ) : (
             <p style={{ fontSize: "12px" }}>Image not found</p>
           )}
-        </div>
-        <div
-          className="card-footer text-center"
-          style={{ fontSize: "12px", padding: "5px" }}
-        >
-          {type}
         </div>
       </div>
     </div>
