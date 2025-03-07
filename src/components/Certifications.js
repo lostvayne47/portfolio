@@ -38,7 +38,7 @@ export default function Certifications() {
               key={index}
             >
               <img
-                src={images[c.name]}
+                src={images[c.imgName]}
                 alt="..."
                 style={{
                   width: "100%",
