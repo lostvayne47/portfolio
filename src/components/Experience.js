@@ -34,7 +34,7 @@ export default function Experience() {
           <h3 className="vertical-timeline-element-title">
             Software Engineer 1
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">Honeywell,Pune</h4>
+          <h5 className="vertical-timeline-element-subtitle">Honeywell,Pune</h5>
           <br />
           <ul>
             <li>
@@ -92,9 +92,9 @@ export default function Experience() {
           <h3 className="vertical-timeline-element-title">
             Process Instrumentation Intern
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h5 className="vertical-timeline-element-subtitle">
             ThyssenKrupp Industrial Solution,Pune
-          </h4>
+          </h5>
           <br />
           <ul>
             <li>
@@ -140,9 +140,9 @@ export default function Experience() {
           }}
         >
           <h3 className="vertical-timeline-element-title">Technical Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h5 className="vertical-timeline-element-subtitle">
             Quarkonics Applied Research Corporation, Remote
-          </h4>
+          </h5>
           <br />
           <ul>
             <li>
@@ -187,9 +187,9 @@ export default function Experience() {
           <h3 className="vertical-timeline-element-title">
             B.Tech, Instrumentation and Control
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h5 className="vertical-timeline-element-subtitle">
             Vishwakarma Institute of Technology
-          </h4>
+          </h5>
           <p>
             Graduated with <b>CGPA 9.65</b> with an elective of Artifical
             Intelligence and Machine learning.
@@ -212,9 +212,9 @@ export default function Experience() {
           <h3 className="vertical-timeline-element-title">
             High School - 12th Science
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h5 className="vertical-timeline-element-subtitle">
             Indira National School (CBSE)
-          </h4>
+          </h5>
           <p>
             Passed with <b>92.6%</b> Ranked 3rd in school.
           </p>
@@ -234,9 +234,9 @@ export default function Experience() {
           }}
         >
           <h3 className="vertical-timeline-element-title">School - 10th</h3>
-          <h4 className="vertical-timeline-element-subtitle">
+          <h5 className="vertical-timeline-element-subtitle">
             Indira National School (CBSE)
-          </h4>
+          </h5>
           <p>
             Passed with <b>94%</b>
             <br />
