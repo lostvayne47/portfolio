@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "imgPath": "../assets/400x200.png",
+    "name": "Honeywell",
+    "link": "https:Honeywell.com"
+  },
+  {
+    "id": 2,
+    "imgPath": "../assets/400x200.png",
+    "name": "Honeywell",
+    "link": "https:Honeywell.com"
+  },
+  {
+    "id": 3,
+    "imgPath": "../assets/400x200.png",
+    "name": "Honeywell",
+    "link": "https:Honeywell.com"
+  },
+  {
+    "id": 4,
+    "imgPath": "../assets/400x200.png",
+    "name": "Honeywell",
+    "link": "https:Honeywell.com"
+  },
+  {
+    "id": 5,
+    "imgPath": "../assets/400x200.png",
+    "name": "Honeywell",
+    "link": "https:Honeywell.com"
+  }
+]
