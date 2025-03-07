@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import certifications from "./certificates.json";
 import { ExternalLink } from "lucide-react";
+import portfolioContext from "../context/Context";
+
 export default function Certifications() {
   const images = Object.fromEntries(
     require
@@ -15,6 +17,7 @@ export default function Certifications() {
         ];
       })
   );
+  const { theme } = useContext(portfolioContext);
   return (
     <div className="container">
       <div id="carouselExampleCaptions" className="carousel slide">
@@ -47,14 +50,22 @@ export default function Certifications() {
                   objectFit: "contain",
                 }}
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div
+                className="carousel-caption d-none d-md-block"
+                style={{
+                  color: "black",
+                  textShadow: "none",
+                }}
+              >
                 <h5>{c.name || "Certification"}</h5>
                 <p style={{ display: "inline" }}>
                   {c.caption || "Some placeholder content for the slide."}
                 </p>
-                <a href={c.link} target="_blank" rel="noreferrer">
-                  <ExternalLink />
-                </a>
+                {c.link ? (
+                  <a href={c.link} target="_blank" rel="noreferrer">
+                    <ExternalLink />
+                  </a>
+                ) : null}
               </div>
             </div>
           ))}
