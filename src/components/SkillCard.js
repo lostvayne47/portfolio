@@ -30,10 +30,10 @@ export default function SkillCard({ title }) {
         }}
       >
         <div
-          className="card-header text-center"
+          className="border-bottom text-center"
           style={{ fontSize: "14px", padding: "5px" }}
         >
-          {title}
+          <b>{title}</b>
         </div>
         <div
           className="card-body d-flex justify-content-center align-items-center"

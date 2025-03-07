@@ -11,13 +11,12 @@ export default function Skills() {
   ];
   return (
     <div
-      className="container d-flex flex-column justify-content-center my-5"
+      className="container d-flex flex-column justify-content-center"
       style={{ height: "100%" }}
     >
-      <h1 className="text-center">Skills</h1>
       <div
         className="container scroll-container"
-        style={{ maxHeight: "85%", overflowY: "auto", padding: "15px" }}
+        style={{ maxHeight: "100%", overflowY: "auto", padding: "15px" }}
       >
         {skillCategories.map((category) => {
           const filteredSkills = SkillsData.filter(
@@ -26,8 +25,8 @@ export default function Skills() {
           return (
             <div
               key={category}
-              className="mb-4 rounded p-3"
-              style={{ border: "3px solid var(--border)" }}
+              className="mb-4 p-3"
+              style={{ borderBottom: "3px solid var(--border)" }}
             >
               <h4 className="text-center mb-3">{category}</h4>
               <div
