@@ -1,0 +1,30 @@
+[
+  { "name": "HTML", "type": "Frontend" },
+  { "name": "CSS", "type": "Frontend" },
+  { "name": "Sass", "type": "Frontend" },
+  { "name": "Dev Express", "type": "Frontend" },
+  { "name": "Figma", "type": "Frontend" },
+
+  { "name": "Java", "type": "Backend" },
+  { "name": "JavaScript", "type": "Backend" },
+  { "name": "Python", "type": "Backend" },
+  { "name": "C#", "type": "Backend" },
+  { "name": "C++", "type": "Backend" },
+
+  { "name": "React", "type": "Framework" },
+  { "name": "Tridium Niagara", "type": "Framework" },
+  { "name": "Spring Boot", "type": "Framework" },
+  { "name": "Bootstrap", "type": "Framework" },
+  { "name": "ExpressJs", "type": "Framework" },
+
+  { "name": "SQL", "type": "Database" },
+  { "name": "MongoDB", "type": "Database" },
+  { "name": "Firebase", "type": "Database" },
+
+  { "name": "AWS", "type": "Cloud & DevOps" },
+  { "name": "Azure", "type": "Cloud & DevOps" },
+  {
+    "name": "Docker",
+    "type": "Cloud & DevOps"
+  }
+]
