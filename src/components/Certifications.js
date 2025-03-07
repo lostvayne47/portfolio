@@ -1,6 +1,6 @@
 import React from "react";
 import certifications from "./certificates.json";
-import placeholder from "../assets/techPlaceholder.jpeg";
+import { ExternalLink } from "lucide-react";
 export default function Certifications() {
   const images = Object.fromEntries(
     require
@@ -49,7 +49,12 @@ export default function Certifications() {
               />
               <div className="carousel-caption d-none d-md-block">
                 <h5>{c.name || "Certification"}</h5>
-                <p>{c.link || "Some placeholder content for the slide."}</p>
+                <p style={{ display: "inline" }}>
+                  {c.caption || "Some placeholder content for the slide."}
+                </p>
+                <a href={c.link} target="_blank" rel="noreferrer">
+                  <ExternalLink />
+                </a>
               </div>
             </div>
           ))}

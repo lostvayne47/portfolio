@@ -3,30 +3,35 @@
     "id": 1,
     "imgPath": "../assets/400x200.png",
     "name": "Honeywell",
-    "link": "https:Honeywell.com"
+    "link": "https:Honeywell.com",
+    "caption": "Performance award"
   },
   {
     "id": 2,
     "imgPath": "../assets/400x200.png",
     "name": "Honeywell",
-    "link": "https:Honeywell.com"
+    "link": "https:Honeywell.com",
+    "caption": "Performance award"
   },
   {
     "id": 3,
     "imgPath": "../assets/400x200.png",
     "name": "Honeywell",
-    "link": "https:Honeywell.com"
+    "link": "https:Honeywell.com",
+    "caption": "Performance award"
   },
   {
     "id": 4,
     "imgPath": "../assets/400x200.png",
     "name": "Honeywell",
-    "link": "https:Honeywell.com"
+    "link": "https:Honeywell.com",
+    "caption": "Performance award"
   },
   {
     "id": 5,
     "imgPath": "../assets/400x200.png",
     "name": "Honeywell",
-    "link": "https:Honeywell.com"
+    "link": "https:Honeywell.com",
+    "caption": "Performance award"
   }
 ]
