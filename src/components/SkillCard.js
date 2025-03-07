@@ -3,12 +3,19 @@ import portfolioContext from "../context/Context";
 
 export default function SkillCard({ title }) {
   // Dynamically import all images from the assets folder
-  const images = {};
-  const context = require.context("../assets", false, /\.(png|jpe?g|svg)$/);
-  context.keys().forEach((key) => {
-    const imageName = key.replace("./", "").split(".")[0]; // Remove './' and extension
-    images[imageName] = context(key);
-  });
+  const images = Object.fromEntries(
+    require
+      .context("../assets", false, /\.(png|jpe?g|svg)$/)
+      .keys()
+      .map((key) => {
+        const fileName = key.replace(/^.\//, ""); // Remove './'
+        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")); // Remove extension safely
+        return [
+          nameWithoutExt,
+          require.context("../assets", false, /\.(png|jpe?g|svg)$/)(key),
+        ];
+      })
+  );
   const { theme } = useContext(portfolioContext);
   return (
     <div>
