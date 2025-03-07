@@ -16,7 +16,7 @@ export default function Experience() {
       className="container scroll-container"
       style={{ maxHeight: "100%", overflowY: "auto", padding: "10px" }}
     >
-      <h1 className=" text-center">Experience</h1>
+      <h1 className=" text-center">Experience & Education</h1>
       <VerticalTimeline lineColor={theme === "dark" ? "white" : "black"}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"

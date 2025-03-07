@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top" data-bs-theme={theme}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Portfolio
+          <b>Portfolio</b>
         </Link>
         <button
           className="navbar-toggler"
