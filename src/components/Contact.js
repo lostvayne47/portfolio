@@ -10,38 +10,53 @@ export default function Contact() {
   const handleClick = (e) => {
     const activity = e.target.id;
     const contactData = ContactInfo[activity];
-    switch (activity) {
-      case "mail":
-        window.location.href = "mailto:" + contactData;
-        break;
-      case "phone":
-        window.location.href = "tel:+91" + contactData;
-        break;
-      default:
-        window.open(contactData, "_blank");
-        break;
+    console.log(activity + "  " + contactData);
+    if (contactData && activity) {
+      switch (activity) {
+        case "mail":
+          window.location.href = "mailto:" + contactData;
+          break;
+        case "phone":
+          window.location.href = "tel:+91" + contactData;
+          break;
+        case "github":
+          window.open(contactData, "_blank");
+        case "linkedin":
+          window.open(contactData, "_blank");
+          break;
+        default:
+          break;
+      }
     }
   };
 
   return (
     <div className="contact-container">
       <div className="icon-container">
-        <Github id="github" onClick={(e) => handleClick(e)} />
+        <Github className="icon" id="github" onClick={(e) => handleClick(e)} />
         <p className="expand-contact">lostvayne47</p>
       </div>
 
       <div className="icon-container">
-        <Linkedin id="linkedin" onClick={(e) => handleClick(e)} />
+        <Linkedin
+          className="icon"
+          id="linkedin"
+          onClick={(e) => handleClick(e)}
+        />
         <p className="expand-contact">Aayush Kamtikar</p>
       </div>
 
       <div className="icon-container">
-        <Mail id="mail" onClick={(e) => handleClick(e)} />
+        <Mail className="icon" id="mail" onClick={(e) => handleClick(e)} />
         <p className="expand-contact">aayushkamtikar@gmail.com</p>
       </div>
 
       <div className="icon-container">
-        <PhoneCall id="phone" onClick={(e) => handleClick(e)} />
+        <PhoneCall
+          className="icon"
+          id="phone"
+          onClick={(e) => handleClick(e)}
+        />
         <p className="expand-contact">+91 9921154704</p>
       </div>
     </div>
