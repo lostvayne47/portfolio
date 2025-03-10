@@ -28,9 +28,14 @@ export default function ProjectItem({ data }) {
         </h5>
         <p
           className="card-text"
+          title={data?.description} // Tooltip on hover
           style={{
             overflow: "hidden",
             height: "7rem",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 4, // Adjust based on need
             textAlign: "justify",
             fontSize: "15px",
           }}
