@@ -21,6 +21,7 @@ export default function Contact() {
           break;
         case "github":
           window.open(contactData, "_blank");
+          break;
         case "linkedin":
           window.open(contactData, "_blank");
           break;
