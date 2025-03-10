@@ -1,5 +1,9 @@
 import React from "react";
-import { Github, Linkedin, Mail, PhoneCall } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { TbMailFilled } from "react-icons/tb";
+import { BiSolidPhoneCall } from "react-icons/bi";
+
 export default function Contact() {
   const ContactInfo = {
     github: "https://github.com/lostvayne47",
@@ -34,12 +38,18 @@ export default function Contact() {
   return (
     <div className="contact-container">
       <div className="icon-container">
-        <Github className="icon" id="github" onClick={(e) => handleClick(e)} />
+        <FaGithub
+          size={24}
+          className="icon"
+          id="github"
+          onClick={(e) => handleClick(e)}
+        />
         <p className="expand-contact">lostvayne47</p>
       </div>
 
       <div className="icon-container">
-        <Linkedin
+        <FaLinkedinIn
+          size={24}
           className="icon"
           id="linkedin"
           onClick={(e) => handleClick(e)}
@@ -48,12 +58,18 @@ export default function Contact() {
       </div>
 
       <div className="icon-container">
-        <Mail className="icon" id="mail" onClick={(e) => handleClick(e)} />
+        <TbMailFilled
+          size={24}
+          className="icon"
+          id="mail"
+          onClick={(e) => handleClick(e)}
+        />
         <p className="expand-contact">aayushkamtikar@gmail.com</p>
       </div>
 
       <div className="icon-container">
-        <PhoneCall
+        <BiSolidPhoneCall
+          size={24}
           className="icon"
           id="phone"
           onClick={(e) => handleClick(e)}

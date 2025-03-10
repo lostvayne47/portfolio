@@ -1,8 +1,8 @@
-import { Sun, Moon } from "lucide-react";
 import { useContext, useEffect } from "react";
 import portfolioContext from "../context/Context";
 import "./css/light.scss";
 import "./css/dark.scss";
+import { FaSun, FaMoon } from "react-icons/fa";
 export default function ThemeToggle() {
   const { theme, setTheme } = useContext(portfolioContext);
   useEffect(() => {
@@ -16,11 +16,14 @@ export default function ThemeToggle() {
         style={{ backgroundColor: "Transparent", border: "none" }}
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        {theme === "light" ? (
-          <Moon size={36} strokeWidth={0} fill="#222222" />
-        ) : (
-          <Sun size={36} fill="white" color="white" />
-        )}
+        <div
+          style={{
+            background: "var(--primary-bg)",
+            color: "var(--primary-text)",
+          }}
+        >
+          {theme === "light" ? <FaMoon size={30} /> : <FaSun size={30} />}
+        </div>
       </button>
     </>
   );
