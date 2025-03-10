@@ -16,6 +16,7 @@ export default function ProjectItem({ data }) {
         className="card-img-top"
         alt="..."
         style={{ width: "100%", height: "40%" }}
+        loading="lazy"
       />
       <div className="card-body">
         <h5

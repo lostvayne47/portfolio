@@ -76,7 +76,7 @@ button {
   cursor: pointer;
 }
 .enlarge:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   box-shadow: 0 0 10px var(--accent);
 }
 
@@ -87,4 +87,23 @@ button {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
+}
+
+.card {
+  animation: wave-motion 1s ease-in-out forwards;
+}
+
+@keyframes wave-motion {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
