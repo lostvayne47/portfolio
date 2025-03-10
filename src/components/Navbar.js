@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import portfolioContext from "../context/Context.js";
 import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle.js";
+import Contact from "./Contact.js";
 export default function Navbar() {
   const { theme } = useContext(portfolioContext);
   const location = useLocation();
@@ -65,6 +66,9 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
+          <div>
+            <Contact />
+          </div>
         </div>
         <div>
           <ThemeToggle />
