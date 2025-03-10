@@ -22,9 +22,7 @@ export default function Projects() {
         className="container d-flex flex-column justify-content-center my-5"
         style={{ height: "100%" }}
       >
-        <h1 className="text-center" style={{ marginTop: "10px" }}>
-          Feel free to explore my work!
-        </h1>
+        <h1 className="text-center">Feel free to explore my work!</h1>
         <div
           className="container custom-scrollbar "
           style={{

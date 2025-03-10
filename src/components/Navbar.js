@@ -44,65 +44,24 @@ export default function Navbar() {
                 Projects
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <Link
-                className={`nav-link dropdown-toggle${
-                  location.pathname === "/technical" ? "active" : ""
+                className={`nav-link ${
+                  location.pathname === "/skills" ? "active" : ""
                 }`}
-                to="/technical"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                to="/skills"
               >
-                Technical
+                Skills
               </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link
-                    className={`dropdown-item ${
-                      location.pathname === "/skills" ? "active" : ""
-                    }`}
-                    to="/skills"
-                  >
-                    Skills
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link
-                    className={`dropdown-item ${
-                      location.pathname === "/certifications" ? "active" : ""
-                    }`}
-                    to="/certifications"
-                  >
-                    Certifications
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link
-                    className={`dropdown-item ${
-                      location.pathname === "/achievements" ? "active" : ""
-                    }`}
-                    to="/achievements"
-                  >
-                    Achievements
-                  </Link>
-                </li>
-              </ul>
             </li>
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  location.pathname === "/contact" ? "active" : ""
+                  location.pathname === "/certifications" ? "active" : ""
                 }`}
-                to="/contact"
+                to="/certifications"
               >
-                Contact
+                Certifications
               </Link>
             </li>
           </ul>
