@@ -107,3 +107,42 @@ button {
     transform: translateY(0);
   }
 }
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Keeps spacing consistent */
+}
+
+.icon-container {
+  position: relative; /* Allows absolute positioning of text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar .expand-contact {
+  position: absolute;
+  bottom: -30px; /* Adjust based on icon size */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevents text from wrapping */
+
+  background: var(--primary-text); /* Dark background for visibility */
+  color: var(--primary-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(5px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.icon-container:hover .expand-contact {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(20px);
+}

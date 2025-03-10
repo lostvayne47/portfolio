@@ -24,14 +24,26 @@ export default function Contact() {
   };
 
   return (
-    <div
-      className="my-4 d-flex g-5 justify-content-around"
-      style={{ minWidth: "15rem" }}
-    >
-      <Github id="github" onClick={(e) => handleClick(e)} />
-      <Linkedin id="linkedin" onClick={(e) => handleClick(e)} />
-      <Mail id="mail" onClick={(e) => handleClick(e)} />
-      <PhoneCall id="phone" onClick={(e) => handleClick(e)} />
+    <div className="contact-container">
+      <div className="icon-container">
+        <Github id="github" onClick={(e) => handleClick(e)} />
+        <p className="expand-contact">lostvayne47</p>
+      </div>
+
+      <div className="icon-container">
+        <Linkedin id="linkedin" onClick={(e) => handleClick(e)} />
+        <p className="expand-contact">Aayush Kamtikar</p>
+      </div>
+
+      <div className="icon-container">
+        <Mail id="mail" onClick={(e) => handleClick(e)} />
+        <p className="expand-contact">aayushkamtikar@gmail.com</p>
+      </div>
+
+      <div className="icon-container">
+        <PhoneCall id="phone" onClick={(e) => handleClick(e)} />
+        <p className="expand-contact">+91 9921154704</p>
+      </div>
     </div>
   );
 }
