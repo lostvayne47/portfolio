@@ -29,7 +29,12 @@ export default function ProjectItem({ data }) {
         src={images[imgName] || images["techPlaceholder"]}
         className="card-img-top"
         alt="..."
-        style={{ width: "100%", height: "40%" }}
+        style={{
+          width: "100%", // Ensures it fits within its container
+          height: "40%",
+          maxWidth: "100%", // Prevents overflow
+          objectFit: "cover", // Ensures it fills the space without distortion
+        }}
         loading="lazy"
       />
       <div className="card-body">
