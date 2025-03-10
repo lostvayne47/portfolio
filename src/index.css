@@ -90,7 +90,7 @@ button {
 }
 
 .card {
-  animation: wave-motion 1s ease-in-out forwards;
+  animation: wave-motion 0.7s forwards;
 }
 
 @keyframes wave-motion {
