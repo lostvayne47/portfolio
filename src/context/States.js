@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import getData from "../api/github.js";
 
 export default function States(props) {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [githubData, setGithubData] = useState([]);
 
   const fetchGithub = async () => {
