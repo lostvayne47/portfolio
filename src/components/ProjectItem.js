@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import placeholder from "../assets/techPlaceholder.jpeg";
-import { Github, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
 import portfolioContext from "../context/Context";
 export default function ProjectItem({ data }) {
   const { theme } = useContext(portfolioContext);
@@ -43,7 +44,7 @@ export default function ProjectItem({ data }) {
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          <Github size={20} />
+          <FaGithub size={20} />
         </a>
         {data?.homepage ? (
           // eslint-disable-next-line

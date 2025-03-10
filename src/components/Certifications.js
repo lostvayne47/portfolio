@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import certifications from "./certificates.json";
-import { ExternalLink } from "lucide-react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import portfolioContext from "../context/Context";
 
 export default function Certifications() {
@@ -47,12 +47,12 @@ export default function Certifications() {
                 }`}
               >
                 <h5>{c.name || "Certification"}</h5>
-                <p style={{ display: "inline" }}>
+                <p style={{ display: "inline", marginRight: "10px" }}>
                   {c.caption || "Some placeholder content for the slide."}
                 </p>
                 {c.link ? (
                   <a href={c.link} target="_blank" rel="noreferrer">
-                    <ExternalLink />
+                    <FaExternalLinkAlt size={18} />
                   </a>
                 ) : null}
               </div>
