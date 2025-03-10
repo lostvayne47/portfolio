@@ -31,6 +31,7 @@ export default function Certifications() {
               className={index === 0 ? "active" : ""}
               aria-current={index === 0 ? "true" : undefined}
               aria-label={`Slide ${index + 1}`}
+              style={{ backgroundColor: "var(--primary-text)" }}
             ></button>
           ))}
         </div>
@@ -40,22 +41,10 @@ export default function Certifications() {
               className={`carousel-item ${index === 0 ? "active" : ""}`}
               key={index}
             >
-              <img
-                src={images[c.imgName]}
-                alt="..."
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxHeight: "600px",
-                  objectFit: "contain",
-                }}
-              />
               <div
-                className="carousel-caption d-none d-md-block"
-                style={{
-                  color: "black",
-                  textShadow: "none",
-                }}
+                className={`text-center my-1 text-${
+                  theme === "dark" ? "light" : "dark"
+                }`}
               >
                 <h5>{c.name || "Certification"}</h5>
                 <p style={{ display: "inline" }}>
@@ -67,6 +56,16 @@ export default function Certifications() {
                   </a>
                 ) : null}
               </div>
+              <img
+                src={images[c.imgName]}
+                alt="..."
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
             </div>
           ))}
         </div>
