@@ -1,9 +1,22 @@
 import React, { useContext } from "react";
-import placeholder from "../assets/techPlaceholder.jpeg";
 import { Globe } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import portfolioContext from "../context/Context";
 export default function ProjectItem({ data }) {
+  const images = Object.fromEntries(
+    require
+      .context("../assets", false, /\.(png|jpe?g|svg)$/)
+      .keys()
+      .map((key) => {
+        const fileName = key.replace(/^.\//, ""); // Remove './'
+        const nameWithoutExt = fileName.slice(0, fileName.lastIndexOf(".")); // Remove extension safely
+        return [
+          nameWithoutExt,
+          require.context("../assets", false, /\.(png|jpe?g|svg)$/)(key),
+        ];
+      })
+  );
+  const imgName = data.name.toLowerCase();
   const { theme } = useContext(portfolioContext);
   return (
     <div
@@ -13,7 +26,7 @@ export default function ProjectItem({ data }) {
       style={{ width: "18rem", padding: "15px" }}
     >
       <img
-        src={placeholder}
+        src={images[imgName] || images["techPlaceholder"]}
         className="card-img-top"
         alt="..."
         style={{ width: "100%", height: "40%" }}
