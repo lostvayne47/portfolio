@@ -111,8 +111,8 @@ button {
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* Keeps spacing consistent */
-  margin-right: 20px;
+  gap: 3rem; /* Keeps spacing consistent */
+  margin-right: 3rem;
 }
 
 .icon-container {
