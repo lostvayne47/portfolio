@@ -19,8 +19,32 @@ export default function Certifications() {
   );
   const { theme } = useContext(portfolioContext);
   return (
-    <div className="container">
-      <div id="carouselExampleCaptions" className="carousel slide">
+    <div className="container h-100 d-flex justify-content-evenly">
+      <div className="w-30 custom-scrollbar" style={{ height: "90%" }}>
+        <h2>Certificates</h2>
+        <div
+          style={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <ul
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {certifications.map((c, index) => (
+              <li key={index}>{c.name}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div id="carouselExampleCaptions" className="carousel slide p-3">
         <div className="carousel-indicators">
           {certifications.map((_, index) => (
             <button
@@ -62,7 +86,7 @@ export default function Certifications() {
                 style={{
                   width: "100%",
                   height: "auto",
-                  maxHeight: "550px",
+                  maxHeight: "500px",
                   objectFit: "contain",
                 }}
               />
