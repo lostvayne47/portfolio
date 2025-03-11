@@ -22,7 +22,6 @@ export default function ThemeToggle() {
       >
         <div
           style={{
-            background: "var(--primary-bg)",
             color: "var(--primary-text)",
           }}
         >
