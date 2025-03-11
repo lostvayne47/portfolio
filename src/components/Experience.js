@@ -58,7 +58,7 @@ export default function Experience() {
           );
         })}
         <VerticalTimelineElement
-          iconStyle={{ background: "rgb(221, 224, 42)", color: "#fff" }}
+          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
           icon={<Star />}
           intersectionObserverProps={{
             rootMargin: "0px 0px -40px 0px",
