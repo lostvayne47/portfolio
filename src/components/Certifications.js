@@ -19,7 +19,7 @@ export default function Certifications() {
   );
   const { theme } = useContext(portfolioContext);
   return (
-    <div className="container h-100 d-flex justify-content-evenly">
+    <div className="container h-100 d-flex justify-content-evenly flex-wrap m-2">
       <div className="w-30 scroll-container" style={{ height: "90%" }}>
         <h2>Certificates</h2>
         <div
@@ -35,6 +35,7 @@ export default function Certifications() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-evenly",
+              paddingLeft: "20px",
             }}
           >
             {certifications.map((c, index) => (
