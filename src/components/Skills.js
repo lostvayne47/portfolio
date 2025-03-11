@@ -35,7 +35,7 @@ export default function Skills() {
               >
                 {filteredSkills.map((skill) => (
                   <SkillCard
-                    key={skill.name}
+                    key={skill.id}
                     title={skill.name}
                     imgPath={skill.src}
                   />

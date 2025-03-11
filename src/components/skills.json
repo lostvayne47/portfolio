@@ -1,27 +1,27 @@
 [
-  { "name": "HTML", "type": "Frontend" },
-  { "name": "CSS", "type": "Frontend" },
-  { "name": "Sass", "type": "Frontend" },
-  { "name": "Dev Express", "type": "Frontend" },
-  { "name": "Figma", "type": "Frontend" },
+  { "id": 1, "name": "HTML", "type": "Frontend" },
+  { "id": 2, "name": "CSS", "type": "Frontend" },
+  { "id": 3, "name": "Sass", "type": "Frontend" },
+  { "id": 4, "name": "Dev Express", "type": "Frontend" },
+  { "id": 5, "name": "Figma", "type": "Frontend" },
 
-  { "name": "Java", "type": "Backend" },
-  { "name": "JavaScript", "type": "Backend" },
-  { "name": "Python", "type": "Backend" },
-  { "name": "C#", "type": "Backend" },
-  { "name": "C++", "type": "Backend" },
+  { "id": 6, "name": "Java", "type": "Backend" },
+  { "id": 7, "name": "JavaScript", "type": "Backend" },
+  { "id": 8, "name": "Python", "type": "Backend" },
+  { "id": 9, "name": "C#", "type": "Backend" },
+  { "id": 10, "name": "C++", "type": "Backend" },
 
-  { "name": "React", "type": "Framework" },
-  { "name": "Tridium Niagara", "type": "Framework" },
-  { "name": "Spring Boot", "type": "Framework" },
-  { "name": "Bootstrap", "type": "Framework" },
-  { "name": "ExpressJs", "type": "Framework" },
+  { "id": 11, "name": "React", "type": "Framework" },
+  { "id": 12, "name": "Tridium Niagara", "type": "Framework" },
+  { "id": 13, "name": "Spring Boot", "type": "Framework" },
+  { "id": 14, "name": "Bootstrap", "type": "Framework" },
+  { "id": 15, "name": "ExpressJs", "type": "Framework" },
 
-  { "name": "SQL", "type": "Database" },
-  { "name": "MongoDB", "type": "Database" },
-  { "name": "Firebase", "type": "Database" },
+  { "id": 16, "name": "SQL", "type": "Database" },
+  { "id": 17, "name": "MongoDB", "type": "Database" },
+  { "id": 18, "name": "Firebase", "type": "Database" },
 
-  { "name": "AWS", "type": "Cloud & DevOps" },
-  { "name": "Azure", "type": "Cloud & DevOps" },
-  { "name": "Docker", "type": "Cloud & DevOps" }
+  { "id": 19, "name": "AWS", "type": "Cloud & DevOps" },
+  { "id": 20, "name": "Azure", "type": "Cloud & DevOps" },
+  { "id": 21, "name": "Docker", "type": "Cloud & DevOps" }
 ]
