@@ -16,7 +16,16 @@ export default function ProjectItem({ data }) {
         ];
       })
   );
+  function capitalizeWords(str) {
+    return str
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+
   const imgName = data.name.toLowerCase();
+  const projectName = capitalizeWords(data?.name?.split("-").join(" "));
+
   const { theme } = useContext(portfolioContext);
   return (
     <div
@@ -42,7 +51,7 @@ export default function ProjectItem({ data }) {
           className="card-title"
           style={{ overflow: "hidden", height: "3rem" }}
         >
-          {data?.name?.split("-").join(" ")}
+          {projectName}
         </h5>
         <p
           className="card-text"
