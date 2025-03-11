@@ -42,7 +42,7 @@ export default function Projects() {
             <InfiniteScroll
               dataLength={githubData.length} //This is important field to render the next data
             >
-              <div className="container ">
+              <div className="container overflow-hidden">
                 <div className="row gap-4 justify-content-center">
                   {githubData.map((data) => {
                     return <ProjectItem key={data.id} data={data} />;
