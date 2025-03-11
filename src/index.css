@@ -73,6 +73,16 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-container {
+    width: 65%;
+  }
+}
 .enlarge {
   cursor: pointer;
 }
