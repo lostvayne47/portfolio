@@ -20,7 +20,7 @@ export default function SkillCard({ title }) {
   return (
     <div>
       <div
-        className={`card glass-effect enlarge text-${
+        className={`card glass-effect highlight enlarge text-${
           theme === "dark" ? "light" : "dark"
         }`}
         style={{

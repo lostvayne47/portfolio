@@ -13,7 +13,11 @@ export default function ThemeToggle() {
   return (
     <>
       <button
-        style={{ backgroundColor: "Transparent", border: "none" }}
+        className="enlarge"
+        style={{
+          backgroundColor: "Transparent",
+          border: "none",
+        }}
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         <div
