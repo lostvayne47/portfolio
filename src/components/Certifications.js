@@ -44,7 +44,11 @@ export default function Certifications() {
         </div>
       </div>
 
-      <div id="carouselExampleCaptions" className="carousel slide p-3">
+      <div
+        id="carouselExampleCaptions"
+        className="carousel slide p-3"
+        data-bs-theme="dark"
+      >
         <div className="carousel-indicators">
           {certifications.map((_, index) => (
             <button
@@ -101,19 +105,19 @@ export default function Certifications() {
           data-bs-slide="prev"
         >
           <span
-            className="carousel-control-prev-icon"
+            className="carousel-control-prev-icon highlight"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
-          className="carousel-control-next"
+          className="carousel-control-next "
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
           <span
-            className="carousel-control-next-icon"
+            className="carousel-control-next-icon highlight"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Next</span>
