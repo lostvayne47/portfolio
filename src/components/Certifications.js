@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import certifications from "./certificates.json";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import portfolioContext from "../context/Context";
-
 export default function Certifications() {
   const images = Object.fromEntries(
     require
@@ -17,6 +16,11 @@ export default function Certifications() {
         ];
       })
   );
+  function goToSlide(index) {
+    const buttonId = `#carousel-button-${index}`;
+    let carouselButton = document.querySelector(buttonId);
+    carouselButton.click();
+  }
   const { theme } = useContext(portfolioContext);
   return (
     <div className="container h-100 d-flex justify-content-evenly flex-wrap m-2">
@@ -36,10 +40,17 @@ export default function Certifications() {
               flexDirection: "column",
               justifyContent: "space-evenly",
               paddingLeft: "20px",
+              cursor: "pointer",
             }}
           >
             {certifications.map((c, index) => (
-              <li key={index}>{c.name}</li>
+              <li
+                className="enlarge"
+                key={index}
+                onClick={() => goToSlide(index)}
+              >
+                {c.name}
+              </li>
             ))}
           </ul>
         </div>
@@ -54,6 +65,7 @@ export default function Certifications() {
           <div className="carousel-indicators">
             {certifications.map((_, index) => (
               <button
+                id={`carousel-button-${index}`}
                 key={index}
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
