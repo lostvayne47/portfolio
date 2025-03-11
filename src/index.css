@@ -1,13 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.navbar .active {
+  transform: translateY(-5px);
+  font-weight: bold; /* Make text bold */
+  color: #fff; /* Ensure text is visible */
+  text-shadow: 0 0 15px var(--accent); /* Strong glowing effect */
+  transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+button {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+  border: 2px solid var(--border);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-scrollbar {
+  overflow-y: auto;
+  max-height: 400px; /* Adjust height */
+}
+
+/* Apply scrollbar styles only inside .custom-scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2898a7;
+  border-radius: 20px; /* Extra rounded */
+}
+
+.glass-effect {
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px) brightness(1.05);
+  -webkit-backdrop-filter: blur(10px) brightness(1.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.scroll-container {
+  overflow: auto; /* Keeps scrolling functional */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE & Edge */
+}
+
+/* For Chrome, Safari, and Edge */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    background: var(--primary-bg) !important; /* Bootstrap primary color */
+  }
+}
+
+.enlarge {
+  cursor: pointer;
+}
+.enlarge:hover {
+  transform: scale(1.1) !important;
+}
+.highlight:hover {
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.carousel-caption :hover {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px) brightness(1.05);
+  -webkit-backdrop-filter: blur(10px) brightness(1.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.card {
+  animation: wave-motion 0.7s forwards;
+}
+
+@keyframes wave-motion {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem; /* Keeps spacing consistent */
+  margin-right: 3rem;
+}
+
+.icon-container {
+  position: relative; /* Allows absolute positioning of text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar .expand-contact {
+  position: absolute;
+  bottom: -30px; /* Adjust based on icon size */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevents text from wrapping */
+
+  background: var(--primary-text); /* Dark background for visibility */
+  color: var(--primary-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(5px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.icon-container:hover .expand-contact {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(20px);
+}
+.icon-container:hover .icon {
+  transform: scale(1.2);
 }

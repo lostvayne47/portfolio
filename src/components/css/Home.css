@@ -1,0 +1,129 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox Container */
+.landing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  max-width: 1000px;
+  width: 70%;
+  gap: 15px;
+  pointer-events: none;
+}
+
+/* Left Side: Text */
+.text-box {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.text-box p {
+  text-align: justify;
+}
+
+.text-box h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Right Side: Image */
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 16rem;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+
+  /* Animation */
+  animation: bounceAnimation 1s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounceAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* 🔹 Medium Screens (Tablets & Small Laptops) */
+@media (max-width: 1024px) {
+  .landing-section {
+    padding: 30px;
+    gap: 15px;
+    width: 90%;
+  }
+
+  .text-box {
+    font-size: 0.85rem;
+  }
+
+  .text-box h1 {
+    font-size: 1.7rem;
+  }
+
+  .image-box img {
+    width: 15rem;
+  }
+}
+
+/* 🔹 Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+  .landing-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .text-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-box p {
+    font-size: 0.85rem;
+  }
+
+  .image-box img {
+    width: 85%;
+    max-width: 300px;
+  }
+}
+
+/* 🔹 Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .landing-section {
+    padding: 18px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 1.3rem;
+  }
+
+  .text-box p {
+    font-size: 0.8rem;
+  }
+
+  .image-box img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
