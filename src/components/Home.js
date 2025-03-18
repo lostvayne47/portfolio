@@ -8,7 +8,7 @@ import ParticleCanvas from "./ParticleCanvas.js";
 import portfolioContext from "../context/Context.js";
 
 export default function Home() {
-  const theme = useContext(portfolioContext);
+  const { theme } = useContext(portfolioContext);
   return (
     <>
       <ParticleCanvas />
