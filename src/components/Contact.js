@@ -35,6 +35,16 @@ export default function Contact() {
     }
   };
 
+  function handleInfoClick(e) {
+    // Get the text field
+    let copyText = e.target.innerText;
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText);
+  }
   return (
     <div className="contact-container">
       <div className="icon-container">
@@ -44,7 +54,9 @@ export default function Contact() {
           id="github"
           onClick={(e) => handleClick(e)}
         />
-        <p className="expand-contact">lostvayne47</p>
+        <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
+          lostvayne47
+        </p>
       </div>
 
       <div className="icon-container">
@@ -54,7 +66,9 @@ export default function Contact() {
           id="linkedin"
           onClick={(e) => handleClick(e)}
         />
-        <p className="expand-contact">Aayush Kamtikar</p>
+        <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
+          Aayush Kamtikar
+        </p>
       </div>
 
       <div className="icon-container">
@@ -64,7 +78,9 @@ export default function Contact() {
           id="mail"
           onClick={(e) => handleClick(e)}
         />
-        <p className="expand-contact">aayushkamtikar@gmail.com</p>
+        <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
+          aayushkamtikar@gmail.com
+        </p>
       </div>
 
       <div className="icon-container">
@@ -74,7 +90,9 @@ export default function Contact() {
           id="phone"
           onClick={(e) => handleClick(e)}
         />
-        <p className="expand-contact">+91 9921154704</p>
+        <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
+          +91 9921154704
+        </p>
       </div>
     </div>
   );
