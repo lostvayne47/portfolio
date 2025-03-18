@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { BiSolidPhoneCall } from "react-icons/bi";
-
+import { FaCopy } from "react-icons/fa";
 export default function Contact() {
   const ContactInfo = {
     github: "https://github.com/lostvayne47",
@@ -39,11 +39,13 @@ export default function Contact() {
     // Get the text field
     let copyText = e.target.innerText;
 
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText);
+    if (copyText) {
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText);
 
-    // Alert the copied text
-    alert("Copied the text: " + copyText);
+      // Alert the copied text
+      alert("Copied the text: " + copyText);
+    }
   }
   return (
     <div className="contact-container">
@@ -55,7 +57,7 @@ export default function Contact() {
           onClick={(e) => handleClick(e)}
         />
         <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
-          lostvayne47
+          lostvayne47 <FaCopy />
         </p>
       </div>
 
@@ -67,7 +69,7 @@ export default function Contact() {
           onClick={(e) => handleClick(e)}
         />
         <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
-          Aayush Kamtikar
+          Aayush Kamtikar <FaCopy />
         </p>
       </div>
 
@@ -79,7 +81,7 @@ export default function Contact() {
           onClick={(e) => handleClick(e)}
         />
         <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
-          aayushkamtikar@gmail.com
+          aayushkamtikar@gmail.com <FaCopy />
         </p>
       </div>
 
@@ -91,7 +93,7 @@ export default function Contact() {
           onClick={(e) => handleClick(e)}
         />
         <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
-          +91 9921154704
+          +91 9921154704 <FaCopy />
         </p>
       </div>
     </div>
