@@ -15,7 +15,7 @@ function App() {
           <Navbar />
           <div
             className="d-flex justify-content-center align-items-center"
-            style={{ marginTop: "70px", height: "90vh" }}
+            style={{ marginTop: "70px", height: "calc(100vh - 70px)" }}
           >
             <Routes>
               <Route path="/" element={<Home />}></Route>
