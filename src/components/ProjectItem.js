@@ -32,7 +32,7 @@ export default function ProjectItem({ data }) {
       className={`card glass-effect text-${
         theme === "dark" ? "light" : "dark"
       }`}
-      style={{ width: "18rem", padding: "15px" }}
+      style={{ width: "20rem", padding: "15px" }}
     >
       <img
         src={images[imgName] || images["techPlaceholder"]}
@@ -58,7 +58,7 @@ export default function ProjectItem({ data }) {
           title={data?.description} // Tooltip on hover
           style={{
             overflow: "hidden",
-            height: "7rem",
+            height: "10rem",
             textOverflow: "ellipsis",
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
