@@ -76,9 +76,7 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-          <div>
-            <Contact />
-          </div>
+          <Contact />
         </div>
         <div>
           <ThemeToggle />
