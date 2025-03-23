@@ -65,6 +65,16 @@ export default function Navbar() {
                 Certifications
               </Link>
             </li>
+            <li className="nav-item">
+              <a
+                href="https://docs.google.com/document/d/1dsfDEpV3VHTDipgCq31hjqSmuQ8l-BXVFJ5FL6JO7WE/export?format=pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link"
+              >
+                Download Resume
+              </a>
+            </li>
           </ul>
           <div>
             <Contact />
