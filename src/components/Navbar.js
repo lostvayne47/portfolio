@@ -67,12 +67,12 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                href="https://docs.google.com/document/d/1dsfDEpV3VHTDipgCq31hjqSmuQ8l-BXVFJ5FL6JO7WE/export?format=pdf"
+                href="https://docs.google.com/document/d/1dsfDEpV3VHTDipgCq31hjqSmuQ8l-BXVFJ5FL6JO7WE/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"
               >
-                Download Resume
+                Resume
               </a>
             </li>
           </ul>
