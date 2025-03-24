@@ -149,7 +149,7 @@ button {
   max-width: none;
   background: var(--primary-text); /* Dark background for visibility */
   color: var(--primary-bg);
-  padding: 5px 15px 5px 10px;
+  padding: 5px 20px 5px 10px;
   border-radius: 5px;
   font-size: 14px;
   opacity: 0;
