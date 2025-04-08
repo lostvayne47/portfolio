@@ -14,7 +14,7 @@
   { "id": 9, "name": "C#", "type": "Backend" },
   { "id": 10, "name": "C++", "type": "Backend" },
 
-  { "id": 22, "name": "NodeJs", "type": "Framework" },
+  { "id": 22, "name": "Node Js", "type": "Framework" },
   { "id": 11, "name": "Dev Express", "type": "Framework" },
   { "id": 12, "name": "Tridium Niagara", "type": "Framework" },
   { "id": 13, "name": "Spring Boot", "type": "Framework" },
