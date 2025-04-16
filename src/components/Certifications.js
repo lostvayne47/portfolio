@@ -24,7 +24,7 @@ export default function Certifications() {
   const { theme } = useContext(portfolioContext);
   return (
     <div className="container h-100 d-flex justify-content-evenly flex-wrap m-2">
-      <div className="w-30 scroll-container" style={{ height: "90%" }}>
+      <div className="w-30 scroll-container" style={{ height: "100%" }}>
         <h2>Certificates</h2>
         <div
           style={{
