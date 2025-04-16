@@ -69,5 +69,61 @@
     "name": "Android Oreo Course",
     "link": "https://www.udemy.com/certificate/UC-4d6808ca-f73b-4aa1-9551-c4f178b50eca/",
     "caption": "Online Course"
+  },
+  {
+    "id": 11,
+    "imgName": "Hackerrank Certificate - Software Engineer",
+    "name": "Software Engineer",
+    "link": "https://www.hackerrank.com/certificates/iframe/9449bb2f1eef",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 12,
+    "imgName": "Hackerrank Certificate - Js (Basic)",
+    "name": "Javascript (Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/bee9bf0d6a27",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 13,
+    "imgName": "Hackerrank Certificate - Js (Intermediate)",
+    "name": "Javascript (Intermediate)",
+    "link": "https://www.hackerrank.com/certificates/iframe/9adc92820a63",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 14,
+    "imgName": "Hackerrank Certificate - React (Basic)",
+    "name": "React (Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/6dea58d2a019",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 15,
+    "imgName": "Hackerrank Certificate - Frontend Developer",
+    "name": "Frontend Developer",
+    "link": "https://www.hackerrank.com/certificates/iframe/3f97ace938ef",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 16,
+    "imgName": "Hackerrank Certificate - SQL(Basic)",
+    "name": "SQL(Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/5a36e8d442b0",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 17,
+    "imgName": "Hackerrank Certificate - SQL(Intermediate)",
+    "name": "SQL(Intermediate)",
+    "link": "https://www.hackerrank.com/certificates/iframe/52b92c24fb15",
+    "caption": "Hackerrank Certificate"
+  },
+  {
+    "id": 18,
+    "imgName": "Hackerrank Certificate - SQL(Advanced)",
+    "name": "SQL(Advanced)",
+    "link": "https://www.hackerrank.com/certificates/iframe/95c610586f41",
+    "caption": "Hackerrank Certificate"
   }
 ]
