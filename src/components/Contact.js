@@ -1,11 +1,13 @@
 import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 import { TbMailFilled } from "react-icons/tb";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaCopy } from "react-icons/fa";
 export default function Contact() {
   const ContactInfo = {
+    leetcode: "https://leetcode.com/u/aayushkamtikar/",
     github: "https://github.com/lostvayne47",
     linkedin: "https://www.linkedin.com/in/aayush-kamtikar/",
     mail: "aayushkamtikar@gmail.com",
@@ -49,6 +51,18 @@ export default function Contact() {
   }
   return (
     <div className="contact-container">
+      <div className="icon-container">
+        <SiLeetcode
+          size={24}
+          className="icon"
+          id="leetcode"
+          onClick={(e) => handleClick(e)}
+        />
+        <p className="expand-contact" onClick={(e) => handleInfoClick(e)}>
+          aayushkamtikar <FaCopy />
+        </p>
+      </div>
+
       <div className="icon-container">
         <FaGithub
           size={24}
