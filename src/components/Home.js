@@ -6,6 +6,7 @@ import profilePhotoDark from "../assets/home-assets-dark.png";
 import { ABOUT_ME_TITLE, ABOUT_ME_DATA } from "../Constants";
 import ParticleCanvas from "./ParticleCanvas.js";
 import portfolioContext from "../context/Context.js";
+import TextPulse from "./TextPulse.js";
 
 export default function Home() {
   const { theme } = useContext(portfolioContext);
@@ -18,8 +19,8 @@ export default function Home() {
           <div className="text-box">
             <div className="my-4">
               <h1 style={{ display: "inline" }}>Hi, I’m </h1>
-              <h1 style={{ display: "inline", color: "var(--name-colour)" }}>
-                {ABOUT_ME_TITLE}
+              <h1 style={{ display: "inline" }}>
+                <TextPulse displayedText={ABOUT_ME_TITLE} />
               </h1>
             </div>
 
