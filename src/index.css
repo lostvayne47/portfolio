@@ -15,6 +15,13 @@ body {
   color: var(--primary-text);
 }
 
+.navbar {
+  background: var(--primary-bg) !important;
+  border-bottom: 0;
+  box-shadow: none;
+  isolation: isolate;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -88,11 +95,62 @@ button {
     width: 65%;
   }
 }
-.enlarge {
-  cursor: pointer;
+.theme-toggle {
+  width: 64px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--border) 72%, var(--accent));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-bg) 82%, var(--primary-text));
+  color: var(--primary-text);
 }
-.enlarge:hover {
-  transform: scale(1.1) !important;
+
+.theme-toggle-track {
+  position: relative;
+  width: 58px;
+  height: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.theme-toggle-icon {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.22);
+  transition: transform 0.22s ease, background 0.22s ease;
+}
+
+.theme-toggle.is-dark .theme-toggle-thumb {
+  transform: translateX(30px);
+}
+
+.theme-toggle.is-light .sun,
+.theme-toggle.is-dark .moon {
+  color: var(--primary-bg);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
 }
 .highlight:hover {
   box-shadow: 0 0 10px var(--accent);
@@ -138,13 +196,20 @@ button {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  line-height: 0;
+}
+
+.icon-container .icon {
+  display: block;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 .navbar .expand-contact {
   position: absolute;
-  bottom: -30px; /* Adjust based on icon size */
+  top: calc(100% + 14px);
   left: 50%;
-  transform: translateX(-50%);
   white-space: nowrap; /* Prevents text from wrapping */
   max-width: none;
   background: var(--primary-text); /* Dark background for visibility */
@@ -152,9 +217,13 @@ button {
   padding: 5px 20px 5px 10px;
   border-radius: 5px;
   font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50%) translateY(5px);
+  pointer-events: none;
+  z-index: 20;
+  transform: translate3d(-50%, 6px, 0);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
     transform 0.3s ease-in-out;
 }
@@ -162,8 +231,8 @@ button {
 .icon-container:hover .expand-contact {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(25px);
+  transform: translate3d(-50%, 0, 0);
 }
 .icon-container:hover .icon {
-  transform: scale(1.2);
+  transform: translateZ(0) scale(1.18);
 }

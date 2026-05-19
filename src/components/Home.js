@@ -1,41 +1,50 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./css/Home.css";
 import profilePhotoLight from "../assets/home-assets-light.png";
 import profilePhotoDark from "../assets/home-assets-dark.png";
 
 import { ABOUT_ME_TITLE, ABOUT_ME_DATA } from "../Constants";
-import ParticleCanvas from "./ParticleCanvas.js";
 import portfolioContext from "../context/Context.js";
 import TextPulse from "./TextPulse.js";
 
 export default function Home() {
   const { theme } = useContext(portfolioContext);
-  return (
-    <>
-      <ParticleCanvas />
-      <div className="container d-flex justify-content-center align-items-center">
-        <section className="landing-section glass-effect">
-          {/* Left Side: Text Content */}
-          <div className="text-box">
-            <div className="my-4">
-              <h1 style={{ display: "inline" }}>Hi, I’m </h1>
-              <h1 style={{ display: "inline" }}>
-                <TextPulse displayedText={ABOUT_ME_TITLE} />
-              </h1>
-            </div>
+  const profilePhoto = theme === "dark" ? profilePhotoDark : profilePhotoLight;
 
-            <p className="my-4">{ABOUT_ME_DATA}</p>
-            <br />
+  return (
+    <main className="home-shell">
+      <section className="landing-section">
+        <div className="hero-copy">
+          <p className="hero-kicker">Software Engineer / Full Stack Builder</p>
+          <h1>
+            Hi, I'm <TextPulse displayedText={ABOUT_ME_TITLE} />
+          </h1>
+          <p className="hero-summary">{ABOUT_ME_DATA}</p>
+
+          <div className="hero-actions" aria-label="Portfolio shortcuts">
+            <Link className="hero-button primary" to="/projects">
+              View Work
+            </Link>
+            <Link className="hero-button secondary" to="/experience">
+              Experience
+            </Link>
           </div>
-          {/* Right Side: Image */}
-          <div className="image-box" loading="lazy">
-            <img
-              src={theme === "dark" ? profilePhotoDark : profilePhotoLight}
-              alt="Landing Background"
-            />
+
+          <div className="hero-stack" aria-label="Core strengths">
+            <span>React</span>
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Cloud</span>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+
+        <div className="hero-visual" aria-hidden="true">
+          <div className="portrait-frame">
+            <img src={profilePhoto} alt="" loading="eager" />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
