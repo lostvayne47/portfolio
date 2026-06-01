@@ -5,10 +5,9 @@
 .home-shell {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: inherit;
   display: flex;
   align-items: center;
-  overflow: hidden;
   background: var(--primary-bg);
 }
 
@@ -196,35 +195,35 @@
 
 @media (max-width: 768px) {
   .home-shell {
-    height: auto;
-    min-height: 100%;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
+    overflow-x: clip;
   }
 
   .landing-section {
     width: min(92vw, 660px);
-    min-height: 100%;
+    min-height: auto;
     height: auto;
-    padding: 20px 0 22px;
+    padding: 22px 0 30px;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(150px, 34vw);
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 
   .hero-copy {
     width: 100%;
     padding: 0;
+    order: 2;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.05rem, 8.5vw, 3.65rem);
+    font-size: clamp(2.05rem, 10vw, 3.35rem);
+    line-height: 1.06;
   }
 
   .hero-summary {
     margin-top: 16px;
-    font-size: 0.93rem;
-    line-height: 1.52;
+    font-size: 0.95rem;
+    line-height: 1.58;
   }
 
   .hero-actions {
@@ -232,7 +231,7 @@
   }
 
   .hero-button {
-    flex: 1 1 128px;
+    flex: 1 1 150px;
     min-width: 118px;
     min-height: 42px;
     padding: 10px 13px;
@@ -250,47 +249,53 @@
   }
 
   .hero-visual {
-    width: 100%;
+    width: min(78vw, 340px);
     min-width: 0;
-    align-self: stretch;
+    order: 1;
+    justify-self: center;
+    align-self: center;
   }
 
   .hero-visual::before {
-    width: min(250px, 34vw);
+    width: min(300px, 70vw);
     transform: translate(4%, -3%);
   }
 
   .portrait-frame {
-    width: min(250px, 34vw);
-    max-height: calc(100vh - 150px);
+    width: min(340px, 78vw);
+    max-height: 320px;
   }
 
   .hero-visual img {
     width: 100%;
+    max-height: 320px;
   }
 }
 
 @media (max-width: 420px) {
   .hero-kicker {
     font-size: 0.72rem;
+    max-width: 100%;
+    white-space: normal;
   }
 
   .hero-copy h1 {
-    font-size: 2.15rem;
+    font-size: clamp(1.95rem, 11vw, 2.35rem);
   }
 
   .hero-actions {
     flex-direction: column;
-    width: min(190px, 100%);
+    width: 100%;
   }
 
   .landing-section {
-    grid-template-columns: minmax(0, 1fr) 128px;
-    gap: 12px;
+    width: min(90vw, 380px);
+    gap: 18px;
+    padding-top: 16px;
   }
 
   .hero-summary {
-    font-size: 0.87rem;
+    font-size: 0.9rem;
   }
 
   .hero-stack span {
@@ -299,7 +304,11 @@
   }
 
   .portrait-frame {
-    width: 128px;
-    max-height: calc(100vh - 165px);
+    width: min(270px, 76vw);
+    max-height: 250px;
+  }
+
+  .hero-visual img {
+    max-height: 250px;
   }
 }

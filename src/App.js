@@ -13,10 +13,7 @@ function App() {
       <States>
         <BrowserRouter>
           <Navbar />
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{ marginTop: "70px", height: "calc(100vh - 70px)" }}
-          >
+          <div className="route-shell">
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/experience" element={<Experience />}></Route>
