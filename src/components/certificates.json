@@ -22,6 +22,20 @@
   },
   {
     "id": 4,
+    "imgName": "Kudos Certificate4",
+    "name": "Bronze Award 4 - Honeywell",
+    "link": "",
+    "caption": "Performance Award"
+  },
+  {
+    "id": 5,
+    "imgName": "Niagara4DevCert",
+    "name": "Niagara 4 Developer Certification",
+    "link": "https://www.tridiumuniversity.com/student/award/hfU46bDgkjY8gspwGLy7whvB",
+    "caption": "Performance Award"
+  },
+  {
+    "id": 6,
     "imgName": "Ingenious hackathon runnerup",
     "name": "Ingenious Hackathon Finalist",
     "link": "",
@@ -29,98 +43,98 @@
   },
 
   {
-    "id": 5,
+    "id": 7,
     "imgName": "React Course",
     "name": "The Ultimate React Course 2024",
     "link": "https://www.udemy.com/certificate/UC-f2a4f13d-c4d7-40ad-a573-5dbdb22af268/",
     "caption": "Online Course"
   },
   {
-    "id": 6,
+    "id": 8,
     "imgName": "Javascript Course",
     "name": "The Ultimate Javascript Course 2024",
     "link": "https://www.udemy.com/certificate/UC-369a6624-2152-4a54-8fae-13a163158896/",
     "caption": "Online Course"
   },
   {
-    "id": 7,
+    "id": 9,
     "imgName": "NVIDIA DLI CERTIFICATE",
     "name": "Fundamentals of deep learning by NVIDIA",
     "link": "https://learn.nvidia.com/certificates?id=aa516e9783ab47b1a994fd5bc1548486",
     "caption": "Online Course"
   },
   {
-    "id": 8,
+    "id": 10,
     "imgName": "Python Course",
     "name": "Python complete course for beginners",
     "link": "https://www.udemy.com/certificate/UC-e7f80016-f24f-4570-bee6-ff0086ff9dd5/",
     "caption": "Online Course"
   },
   {
-    "id": 9,
+    "id": 11,
     "imgName": "Ai course",
     "name": "Artifical Intelligence in the Classroom",
     "link": "https://www.udemy.com/certificate/UC-938226d2-8487-4b4b-864a-9229a9d520a0/",
     "caption": "Online Course"
   },
   {
-    "id": 10,
+    "id": 12,
     "imgName": "Android Oreo Course",
     "name": "Android Oreo Course",
     "link": "https://www.udemy.com/certificate/UC-4d6808ca-f73b-4aa1-9551-c4f178b50eca/",
     "caption": "Online Course"
   },
   {
-    "id": 11,
+    "id": 13,
     "imgName": "Hackerrank Certificate - Software Engineer",
     "name": "Software Engineer",
     "link": "https://www.hackerrank.com/certificates/iframe/9449bb2f1eef",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 12,
+    "id": 14,
     "imgName": "Hackerrank Certificate - Js (Basic)",
     "name": "Javascript (Basic)",
     "link": "https://www.hackerrank.com/certificates/iframe/bee9bf0d6a27",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 13,
+    "id": 15,
     "imgName": "Hackerrank Certificate - Js (Intermediate)",
     "name": "Javascript (Intermediate)",
     "link": "https://www.hackerrank.com/certificates/iframe/9adc92820a63",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 14,
+    "id": 16,
     "imgName": "Hackerrank Certificate - React (Basic)",
     "name": "React (Basic)",
     "link": "https://www.hackerrank.com/certificates/iframe/6dea58d2a019",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 15,
+    "id": 17,
     "imgName": "Hackerrank Certificate - Frontend Developer",
     "name": "Frontend Developer",
     "link": "https://www.hackerrank.com/certificates/iframe/3f97ace938ef",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 16,
+    "id": 18,
     "imgName": "Hackerrank Certificate - SQL(Basic)",
     "name": "SQL(Basic)",
     "link": "https://www.hackerrank.com/certificates/iframe/5a36e8d442b0",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 17,
+    "id": 19,
     "imgName": "Hackerrank Certificate - SQL(Intermediate)",
     "name": "SQL(Intermediate)",
     "link": "https://www.hackerrank.com/certificates/iframe/52b92c24fb15",
     "caption": "Hackerrank Certificate"
   },
   {
-    "id": 18,
+    "id": 20,
     "imgName": "Hackerrank Certificate - SQL(Advanced)",
     "name": "SQL(Advanced)",
     "link": "https://www.hackerrank.com/certificates/iframe/95c610586f41",
