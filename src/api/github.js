@@ -35,6 +35,8 @@ const fetchLanguages = async (url) => {
   }
 };
 
+const hasHomepage = (project) => Boolean(project.homepage?.trim());
+
 const getData = async () => {
   try {
     const data = await getGithubData();
@@ -54,7 +56,9 @@ const getData = async () => {
       })
     );
 
-    return filteredData; // Correctly returning data after processing
+    return filteredData.sort(
+      (a, b) => Number(hasHomepage(b)) - Number(hasHomepage(a))
+    );
   } catch (e) {
     console.error("Error fetching GitHub data:", e.message);
     return []; // Return empty array in case of failure
