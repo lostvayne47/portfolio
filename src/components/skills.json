@@ -24,8 +24,9 @@
   { "id": 16, "name": "SQL", "type": "Database" },
   { "id": 17, "name": "MongoDB", "type": "Database" },
   { "id": 18, "name": "Firebase", "type": "Database" },
+  { "id": 19, "name": "PostGreSQL", "type": "Database" },
 
-  { "id": 19, "name": "AWS", "type": "Cloud & DevOps" },
-  { "id": 20, "name": "Azure", "type": "Cloud & DevOps" },
-  { "id": 21, "name": "Docker", "type": "Cloud & DevOps" }
+  { "id": 20, "name": "AWS", "type": "Cloud & DevOps" },
+  { "id": 21, "name": "Azure", "type": "Cloud & DevOps" },
+  { "id": 22, "name": "Docker", "type": "Cloud & DevOps" }
 ]
