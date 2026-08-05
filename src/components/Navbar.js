@@ -67,7 +67,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                href="https://docs.google.com/document/d/1dsfDEpV3VHTDipgCq31hjqSmuQ8l-BXVFJ5FL6JO7WE/export?format=pdf"
+                href="https://docs.google.com/document/d/1AZu1cXBu2xDnOtA3rwt70lLocL8EdsUiUuKZazk87D8/export?format=pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"
