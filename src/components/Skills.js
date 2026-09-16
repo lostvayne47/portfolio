@@ -1,50 +1,59 @@
-import React from "react";
-import SkillCard from "./SkillCard";
-import SkillsData from "./skills.json";
+import {
+  Server,
+  Code2,
+  Database,
+  Cloud,
+  Network,
+  Terminal,
+} from "lucide-react";
+import site from "../data/site.json";
+import { skillGroups } from "../data/profile";
+import { SectionHeading } from "./UI";
+const icons = {
+  server: Server,
+  code: Code2,
+  database: Database,
+  cloud: Cloud,
+  network: Network,
+  terminal: Terminal,
+};
 export default function Skills() {
-  const skillCategories = [
-    "Frontend",
-    "Backend",
-    "Framework",
-    "Database",
-    "Cloud & DevOps",
-  ];
   return (
-    <div
-      className="container d-flex flex-column justify-content-center"
-      style={{ height: "100%" }}
-    >
-      <div
-        className="container scroll-container"
-        style={{ maxHeight: "100%", overflowY: "auto", padding: "15px" }}
-      >
-        {skillCategories.map((category) => {
-          const filteredSkills = SkillsData.filter(
-            (skill) => skill.type === category
-          );
+    <section className="section container" id="skills">
+      <SectionHeading {...site.sections.skills} />
+      <div className="skills-grid">
+        {skillGroups.map((group, i) => {
+          const Icon = icons[group.icon];
           return (
-            <div
-              key={category}
-              className="mb-4 p-3"
-              style={{ borderBottom: "3px solid var(--border)" }}
-            >
-              <h4 className="text-center mb-3">{category}</h4>
-              <div
-                className="d-flex justify-content-evenly gap-3 flex-wrap "
-                style={{ width: "100%" }}
-              >
-                {filteredSkills.map((skill) => (
-                  <SkillCard
-                    key={skill.id}
-                    title={skill.name}
-                    imgPath={skill.src}
-                  />
-                ))}
+            <article className="skill-group" key={group.title}>
+              <div className="skill-top">
+                <Icon size={23} />
+                <span>0{i + 1}</span>
               </div>
-            </div>
+              <p className="eyebrow">{group.note}</p>
+              <h3>{group.title}</h3>
+              <ul>
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
           );
         })}
       </div>
-    </div>
+      <div className="iot-callout">
+        <Network size={32} />
+        <div>
+          <h3>{site.iot.title}</h3>
+          <p>{site.iot.description}</p>
+        </div>
+        <a href="#experience" aria-label="See industrial software experience">
+          <Arrow />
+        </a>
+      </div>
+    </section>
   );
+}
+function Arrow() {
+  return <span aria-hidden="true">↗</span>;
 }

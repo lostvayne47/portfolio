@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "designation": "Software Engineer 1",
+    "location": "Pune",
+    "date": "Jul 2023 - Present",
+    "type": "work",
+    "points": [
+      "Improved backend data exchange performance by 37% by developing and optimizing Spring Boot MVC services with efficient API design and JPA-based data access.",
+      "Architected a certificate lifecycle management system for 200+ BACnet SC devices, strengthening secure communication and enabling scalable onboarding using Core Java and public third-party libraries for a flagship product release.",
+      "Delivered enterprise React.js dashboards in a multi-team environment, using Redux, SASS, and a shared custom component library to ensure consistent and maintainable UI.",
+      "Accelerated UI delivery and reduced design-to-development gaps by translating Figma designs into responsive, production-ready dashboards.",
+      "Increased backend processing capacity under load by implementing multithreaded and concurrent systems in Java.",
+      "Extended legacy system accessibility by enabling browser-based interaction via RPC-driven client-server communication, reducing operator licensing costs by $200 per user.",
+      "Improved system efficiency by ~20% by implementing event-driven workflows with subscription-based callbacks, enabling scalable handling of 1000+ history and alarm events.",
+      "Reduced defects and improved release reliability by enhancing CI/CD pipelines and implementing automated unit and integration testing.",
+      "Streamlined deployments and reduced environment inconsistencies by containerizing services using Docker and integrating with CI/CD pipelines for faster delivery.",
+      "Enabled seamless interoperability across distributed systems by integrating BACnet, Modbus, MQTT, and Panel Bus protocols."
+    ],
+    "company": "Honeywell",
+    "current": true,
+    "previewCount": 3,
+    "stack": ["Java", "Spring Boot", "React", "Niagara", "BACnet SC", "Docker"]
+  },
+  {
+    "id": 2,
+    "designation": "Process Instrumentation Intern",
+    "location": "Pune",
+    "date": "Jul 2022 - Jul 2023",
+    "type": "work",
+    "points": [
+      "Involved in a large-scale brownfield PSU EPCM project for the Government of India under the guidance of the Chief Engineer.",
+      "Developed and maintained the instrument index and wiring diagrams.",
+      "Prepared functional loop schematics and technical specification sheets for control valves and other instrumentation in Smart Plant Instrumentation.",
+      "Managed purchase orders and coordinated with vendors for timely procurement.",
+      "Prepared detailed Instrument Hookups and corresponding bills of material for project-wide procurement.",
+      "Validated and prepared IO counts for DCS, ESD, and FGS systems using P&ID diagrams."
+    ],
+    "company": "ThyssenKrupp Industrial Solution",
+    "current": false,
+    "previewCount": 2,
+    "stack": []
+  },
+  {
+    "id": 3,
+    "designation": "Technical Intern",
+    "location": "Remote",
+    "date": "Apr 2021 - Jul 2021",
+    "type": "work",
+    "points": [
+      "Built RESTful APIs using Node.js/Express with MongoDB, optimizing query patterns and indexing to reduce latency and improve performance.",
+      "Developed React components with Redux for efficient state management, minimizing re-renders and improving UI responsiveness.",
+      "Refactored async workflows and modularized backend routes/middleware, enhancing scalability and reducing redundant API calls (~15% improvement)."
+    ],
+    "company": "Quarkonics Applied Research Corporation",
+    "current": false,
+    "previewCount": 2,
+    "stack": []
+  },
+  {
+    "id": 4,
+    "designation": "B.Tech, Instrumentation and Control",
+    "location": "Vishwakarma Institute of Technology",
+    "date": "Aug 2019 - May 2023",
+    "type": "education",
+    "points": [
+      "Graduated with CGPA 9.65 with an elective of Artificial Intelligence and Machine Learning."
+    ],
+    "featured": true
+  },
+  {
+    "id": 5,
+    "designation": "High School - 12th Science",
+    "location": "Indira National School (CBSE)",
+    "date": "Apr 2017 - Mar 2019",
+    "type": "education",
+    "points": ["Passed with 92.6%, Ranked 3rd in school."],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "designation": "School - 10th",
+    "location": "Indira National School (CBSE)",
+    "date": "Apr 2007 - Mar 2017",
+    "type": "education",
+    "points": [
+      "Passed with 94%   Represented and led the football team at various state-level tournaments."
+    ],
+    "featured": false
+  }
+]

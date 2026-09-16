@@ -1,0 +1,208 @@
+[
+  {
+    "slug": "AI-Code-Dependency-Mapper",
+    "title": "AI Code Dependency Mapper",
+    "description": "Understand an unfamiliar codebase through interactive dependency graphs, extracted symbols, and local code summaries.",
+    "url": "https://github.com/lostvayne47/AI-Code-Dependency-Mapper",
+    "demo": "",
+    "stack": ["React", "TypeScript", "Python", "FastAPI"],
+    "category": "Developer tools",
+    "kind": "graph",
+    "contribution": "Parses Python ASTs and JavaScript imports with a local FastAPI service. LLM-powered summaries are a planned extension.",
+    "status": "Local-first · LLM integration planned",
+    "featured": true,
+    "groups": ["iot-ai"]
+  },
+  {
+    "slug": "family-expense-tracker",
+    "title": "Family Expense Tracker",
+    "description": "A shared view of household spending, with per-user expense tracking and interactive monthly charts.",
+    "url": "https://github.com/lostvayne47/family-expense-tracker",
+    "demo": "https://family-expense-tracker-frontend-six.vercel.app",
+    "stack": ["React", "Node.js", "Express", "MongoDB"],
+    "category": "Full-stack application",
+    "kind": "dashboard",
+    "contribution": "Connects a MERN application to household expense data and visualizes spending across users.",
+    "status": "Full-stack · Web application",
+    "featured": true,
+    "groups": ["full-stack"]
+  },
+  {
+    "slug": "niagara-mcp",
+    "title": "Niagara × MCP",
+    "description": "Exploring the connection between building automation systems and AI tools through the Model Context Protocol.",
+    "url": "https://github.com/lostvayne47/niagara-mcp",
+    "demo": "",
+    "stack": ["Java", "Niagara", "MCP"],
+    "category": "IoT & AI exploration",
+    "kind": "network",
+    "contribution": "A Java proof of concept investigating MCP integration with the Niagara platform.",
+    "status": "Proof of concept",
+    "featured": true,
+    "groups": ["iot-ai"]
+  },
+  {
+    "slug": "Warranty-Tracker",
+    "title": "Warranty Tracker",
+    "description": "Keep product warranties organized, generate detailed reports, and send email notifications on demand.",
+    "url": "https://github.com/lostvayne47/Warranty-Tracker",
+    "demo": "https://warranty-tracker.vercel.app",
+    "stack": ["Next.js", "JavaScript", "Vercel"],
+    "category": "Full-stack application",
+    "kind": "warranty",
+    "contribution": "Brings warranty tracking, reports, and notification workflows into a single web application.",
+    "status": "Web application",
+    "featured": true,
+    "groups": ["full-stack"]
+  },
+  {
+    "slug": "Advanced-Warranty-Tracker",
+    "title": "Advanced Warranty Tracker",
+    "description": "Source code available on GitHub.",
+    "url": "https://github.com/lostvayne47/Advanced-Warranty-Tracker",
+    "demo": "",
+    "stack": ["JavaScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Animations",
+    "title": "Animations",
+    "description": "Ready to use animations created using Framer Motion Package",
+    "url": "https://github.com/lostvayne47/Animations",
+    "demo": "",
+    "stack": ["TypeScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Automate-Youtube-Views",
+    "title": "Automate Youtube Views",
+    "description": "Automate playing videos on youtube using python ",
+    "url": "https://github.com/lostvayne47/Automate-Youtube-Views",
+    "demo": "",
+    "stack": ["Python"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "CSS-Loading-Animations",
+    "title": "CSS Loading Animations",
+    "description": "Reusable loading animations template made using CSS ",
+    "url": "https://github.com/lostvayne47/CSS-Loading-Animations",
+    "demo": "",
+    "stack": ["CSS"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "FAQ-Webpage",
+    "title": "FAQ Webpage",
+    "description": "Reusable FAQ template made using vanilla javascript.",
+    "url": "https://github.com/lostvayne47/FAQ-Webpage",
+    "demo": "",
+    "stack": ["HTML"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "i-notebook",
+    "title": "i notebook",
+    "description": "A Notes Application that allows users to create, read, update, and delete (CRUD) notes efficiently. Users can organize their notes with titles and descriptions  and categorize them for better accessibility.",
+    "url": "https://github.com/lostvayne47/i-notebook",
+    "demo": "https://lostvayne-inotebook.netlify.app/",
+    "stack": ["JavaScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Kanji-Memory-Card-Game",
+    "title": "Kanji Memory Card Game",
+    "description": "Android app made for Learning Japanese Kanji, integrated with SQL lite database.",
+    "url": "https://github.com/lostvayne47/Kanji-Memory-Card-Game",
+    "demo": "",
+    "stack": ["Java"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "madhavi-portfolio",
+    "title": "madhavi portfolio",
+    "description": "Portfolio made using react & Radix UI.",
+    "url": "https://github.com/lostvayne47/madhavi-portfolio",
+    "demo": "https://madhavi-portfolio-two.vercel.app",
+    "stack": ["TypeScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "my-news-app",
+    "title": "my news app",
+    "description": "Inshorts clone made to show news cards in infinite scroll using free APIs.",
+    "url": "https://github.com/lostvayne47/my-news-app",
+    "demo": "",
+    "stack": ["JavaScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "My-Text-Util",
+    "title": "My Text Util",
+    "description": "Website made in react to analyze text and perform transformation operations.",
+    "url": "https://github.com/lostvayne47/My-Text-Util",
+    "demo": "https://lostvayne47.github.io/My-Text-Util/",
+    "stack": ["JavaScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Online-Shopping-System",
+    "title": "Online Shopping System",
+    "description": "Shopping system made in C++ language which includes concepts of File handling and OOPs.",
+    "url": "https://github.com/lostvayne47/Online-Shopping-System",
+    "demo": "",
+    "stack": ["C++"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "SaaS-Web-Page",
+    "title": "SaaS Web Page",
+    "description": "Marketing Web Page for a B2B Saas Company",
+    "url": "https://github.com/lostvayne47/SaaS-Web-Page",
+    "demo": "https://saa-s-web-page.vercel.app",
+    "stack": ["TypeScript"],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Smart-Inventory-Management-App",
+    "title": "Smart Inventory Management App",
+    "description": "Implemented through an android app connected to firebase to dynamically scan QR codes and update on website to keep track of inventory.",
+    "url": "https://github.com/lostvayne47/Smart-Inventory-Management-App",
+    "demo": "",
+    "stack": [],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Uber-Data-Analysis",
+    "title": "Uber Data Analysis",
+    "description": "This project uses already available uber rides database of New York City and with the help of R language we have plotted the data in the form of graphs and heat maps which can be used for data analysis.",
+    "url": "https://github.com/lostvayne47/Uber-Data-Analysis",
+    "demo": "",
+    "stack": [],
+    "featured": false,
+    "groups": []
+  },
+  {
+    "slug": "Ultrasonic-Gesture-System",
+    "title": "Ultrasonic Gesture System",
+    "description": "This project utilizes ultrasonic sensors to detect hand gestures and control applications using Arduino and Python. Data is sent to python and a script is run to automate commands using pyautogui.",
+    "url": "https://github.com/lostvayne47/Ultrasonic-Gesture-System",
+    "demo": "",
+    "stack": ["C++"],
+    "featured": false,
+    "groups": []
+  }
+]

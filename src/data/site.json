@@ -1,0 +1,157 @@
+{
+  "navigation": [
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "experience",
+      "label": "Experience"
+    },
+    {
+      "id": "skills",
+      "label": "Expertise"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Full-stack software engineer",
+    "headline": [
+      "Software that",
+      "connects the"
+    ],
+    "highlight": "whole system.",
+    "intro": "I build with",
+    "coreStack": "Java, Spring Boot, and React",
+    "description": "connecting industrial devices, backend services, and the people who use them.",
+    "supportingText": "Grounded in IoT. Built for the cloud. Exploring what’s next with AI.",
+    "projectCta": "Explore my work",
+    "resumeCta": "View resume"
+  },
+  "impact": {
+    "source": "From my work at Honeywell",
+    "items": [
+      {
+        "value": "37",
+        "suffix": "%",
+        "label": "Faster backend data exchange"
+      },
+      {
+        "value": "200",
+        "suffix": "+",
+        "label": "BACnet SC devices secured"
+      },
+      {
+        "value": "1,000",
+        "suffix": "+",
+        "label": "History & alarm events handled"
+      }
+    ]
+  },
+  "diagram": {
+    "title": "Engineering across the stack",
+    "footer": "Exploring AI tooling with Python & MCP",
+    "steps": [
+      {
+        "id": "connect",
+        "icon": "radio",
+        "label": "01 / CONNECT",
+        "title": "Devices & industrial systems",
+        "detail": "Niagara · BACnet SC · MQTT"
+      },
+      {
+        "id": "build",
+        "icon": "braces",
+        "label": "02 / BUILD",
+        "title": "Java & Spring Boot",
+        "detail": "APIs · Concurrent services · Security",
+        "core": true
+      },
+      {
+        "id": "persist",
+        "icon": "database",
+        "label": "03 / PERSIST",
+        "title": "Databases",
+        "detail": "SQL · MongoDB",
+        "compact": true
+      },
+      {
+        "id": "deploy",
+        "icon": "cloud",
+        "label": "04 / DEPLOY",
+        "title": "Cloud & delivery",
+        "detail": "Docker · AWS · Azure",
+        "compact": true
+      },
+      {
+        "id": "interact",
+        "icon": "cpu",
+        "label": "05 / INTERACT",
+        "title": "React applications",
+        "detail": "Dashboards · Connected experiences"
+      }
+    ]
+  },
+  "sections": {
+    "projects": {
+      "number": "01",
+      "label": "Selected work",
+      "title": "Built to solve real problems.",
+      "description": "From everyday applications to the intersection of connected devices and intelligent tools."
+    },
+    "experience": {
+      "number": "02",
+      "label": "Experience",
+      "title": "Engineering in the real world.",
+      "description": "Production software. Connected systems. Ownership across the stack."
+    },
+    "skills": {
+      "number": "03",
+      "label": "Technical expertise",
+      "title": "One engineer. The complete stack.",
+      "description": "A backend foundation, a frontend mindset, and experience beyond the browser."
+    },
+    "about": {
+      "number": "04",
+      "label": "A little context",
+      "title": "Curiosity, with a practical foundation."
+    }
+  },
+  "projectFilters": [
+    {
+      "id": "all",
+      "label": "All work"
+    },
+    {
+      "id": "full-stack",
+      "label": "Full stack"
+    },
+    {
+      "id": "iot-ai",
+      "label": "IoT & AI exploration"
+    }
+  ],
+  "iot": {
+    "title": "Where physical systems meet software.",
+    "description": "Industrial protocols, secure device onboarding, and event-driven services bring a different perspective to building dependable full-stack applications."
+  },
+  "contact": {
+    "eyebrow": "Let’s connect",
+    "headline": "Have a system to build?",
+    "highlight": "Let’s talk engineering.",
+    "description": "Java & Spring Boot · Full stack · IoT · AI-enabled applications"
+  },
+  "awards": {
+    "title": "Honeywell Bronze Awards",
+    "caption": "Recognition for performance",
+    "group": "honeywell-bronze"
+  },
+  "footer": "Built with React. Designed with intent.",
+  "seo": {
+    "titleSuffix": "Full-Stack Software Engineer",
+    "description": "Full-stack software engineer building Java and Spring Boot services, React applications, secure IoT systems, and exploring AI developer tools."
+  }
+}

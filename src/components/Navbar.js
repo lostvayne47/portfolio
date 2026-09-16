@@ -1,87 +1,84 @@
-import React, { useContext } from "react";
-import portfolioContext from "../context/Context.js";
-import { useLocation, Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle.js";
-import Contact from "./Contact.js";
+import { useEffect, useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { profile } from "../data/profile";
+import site from "../data/site.json";
+import { ExternalLink } from "./UI";
+
 export default function Navbar() {
-  const { theme } = useContext(portfolioContext);
-  const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        }),
+      { rootMargin: "-15% 0px -65% 0px" },
+    );
+    document
+      .querySelectorAll("main > section[id]")
+      .forEach((el) => observer.observe(el));
+    const close = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        document.querySelector(".menu-toggle")?.focus();
+      }
+    };
+    document.addEventListener("keydown", close);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("keydown", close);
+    };
+  }, []);
   return (
-    <nav className="navbar navbar-expand-lg fixed-top" data-bs-theme={theme}>
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <b>Portfolio</b>
-        </Link>
+    <header className="site-header">
+      <div className="nav-shell">
+        <a className="brand" href="#top" onClick={() => setOpen(false)}>
+          <span className="brand-mark">
+            {profile.initials}
+            <span>.</span>
+          </span>
+          <span>
+            {profile.name}
+            <span className="brand-role">{profile.role}</span>
+          </span>
+        </a>
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className="menu-toggle"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          aria-controls="primary-navigation"
+          onClick={() => setOpen(!open)}
         >
-          <span className="navbar-toggler-icon"></span>
+          {open ? <X /> : <Menu />}
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${
-                  location.pathname === "/experience" ? "active" : ""
-                }`}
-                to="/experience"
-              >
-                Experience
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${
-                  location.pathname === "/projects" ? "active" : ""
-                }`}
-                to="/projects"
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${
-                  location.pathname === "/skills" ? "active" : ""
-                }`}
-                to="/skills"
-              >
-                Skills
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${
-                  location.pathname === "/certifications" ? "active" : ""
-                }`}
-                to="/certifications"
-              >
-                Certifications
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a
-                href="https://docs.google.com/document/d/1AZu1cXBu2xDnOtA3rwt70lLocL8EdsUiUuKZazk87D8/export?format=pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-link"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-          <Contact />
-        </div>
-        <div>
-          <ThemeToggle />
-        </div>
+        <nav
+          id="primary-navigation"
+          aria-label="Main navigation"
+          className={open ? "nav-links is-open" : "nav-links"}
+        >
+          {site.navigation.map(({ id, label }) => (
+            <a
+              key={id}
+              href={"#" + id}
+              aria-current={active === id ? "location" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </a>
+          ))}
+          <ExternalLink className="nav-resume" href={profile.resume}>
+            Resume <ArrowUpRight size={15} />
+          </ExternalLink>
+          <a
+            className="nav-contact"
+            href="#contact"
+            onClick={() => setOpen(false)}
+          >
+            Let’s talk <ArrowUpRight size={15} />
+          </a>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "width": 1024,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 320,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "responsive overflow",
+    "mobile navigation",
+    "project filters",
+    "project archive",
+    "all credentials",
+    "legacy routes",
+    "keyboard skip link",
+    "reduced motion",
+    "rendered images"
+  ]
+}

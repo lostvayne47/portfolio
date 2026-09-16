@@ -1,50 +1,135 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import "./css/Home.css";
-import profilePhotoLight from "../assets/home-assets-light.png";
-import profilePhotoDark from "../assets/home-assets-dark.png";
-
-import { ABOUT_ME_TITLE, ABOUT_ME_DATA } from "../Constants";
-import portfolioContext from "../context/Context.js";
-import TextPulse from "./TextPulse.js";
-
-export default function Home() {
-  const { theme } = useContext(portfolioContext);
-  const profilePhoto = theme === "dark" ? profilePhotoDark : profilePhotoLight;
-
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Braces,
+  Cpu,
+  Database,
+  Cloud,
+  Radio,
+  Github,
+  Linkedin,
+} from "lucide-react";
+import { profile } from "../data/profile";
+import site from "../data/site.json";
+import experience from "../data/experience.json";
+import { ExternalLink } from "./UI";
+const icons = {
+  radio: Radio,
+  braces: Braces,
+  database: Database,
+  cloud: Cloud,
+  cpu: Cpu,
+};
+function SystemDiagram() {
   return (
-    <main className="home-shell">
-      <section className="landing-section">
+    <div className="system-card">
+      <div className="system-top">
+        <span>
+          <span className="status-dot" />
+          {site.diagram.title}
+        </span>
+        <span>01 / {String(site.diagram.steps.length).padStart(2, "0")}</span>
+      </div>
+      <div className="system-body">
+        {site.diagram.steps.map((step) => {
+          const Icon = icons[step.icon] || Braces;
+          return (
+            <div
+              className={`system-row ${step.core ? "core" : ""} ${step.compact ? "compact" : ""}`}
+              key={step.id}
+            >
+              <span className="system-icon">
+                <Icon />
+              </span>
+              <div>
+                <span className="system-label">{step.label}</span>
+                <strong>{step.title}</strong>
+                <small>{step.detail}</small>
+              </div>
+              {step.core ? (
+                <span className="core-tag">CORE</span>
+              ) : (
+                <span className="node-dot" />
+              )}
+            </div>
+          );
+        })}
+      </div>
+      <div className="system-foot">
+        <span className="code-symbol" aria-hidden="true">
+          ↳
+        </span>
+        {site.diagram.footer}
+        <ArrowUpRight size={16} />
+      </div>
+    </div>
+  );
+}
+export default function Home() {
+  const currentRole = experience.find((e) => e.type === "work" && e.current);
+  return (
+    <section className="hero container" id="top" aria-labelledby="hero-title">
+      <div className="hero-main">
         <div className="hero-copy">
-          <p className="hero-kicker">Software Engineer / Full Stack Builder</p>
-          <h1>
-            Hi, I'm <TextPulse displayedText={ABOUT_ME_TITLE} />
+          <p className="eyebrow hero-eyebrow">
+            <span className="status-dot" />
+            {site.hero.eyebrow}
+          </p>
+          <h1 id="hero-title">
+            {site.hero.headline.map((line) => (
+              <span className="headline-line" key={line}>
+                {line}
+              </span>
+            ))}
+            <span className="headline-accent">{site.hero.highlight}</span>
           </h1>
-          <p className="hero-summary">{ABOUT_ME_DATA}</p>
-
-          <div className="hero-actions" aria-label="Portfolio shortcuts">
-            <Link className="hero-button primary" to="/projects">
-              View Work
-            </Link>
-            <Link className="hero-button secondary" to="/experience">
-              Experience
-            </Link>
+          <p className="hero-intro">
+            I’m {profile.shortName}. {site.hero.intro}{" "}
+            <strong>{site.hero.coreStack}</strong> — {site.hero.description}
+          </p>
+          <p className="hero-sub">{site.hero.supportingText}</p>
+          <div className="hero-actions">
+            <a className="button primary" href="#projects">
+              {site.hero.projectCta}
+              <ArrowRight size={20} />
+            </a>
+            <ExternalLink className="button secondary" href={profile.resume}>
+              {site.hero.resumeCta}
+              <ArrowUpRight size={20} />
+            </ExternalLink>
           </div>
-
-          <div className="hero-stack" aria-label="Core strengths">
-            <span>React</span>
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>Cloud</span>
+          <div className="hero-social">
+            {currentRole && (
+              <span>
+                Currently building at <strong>{currentRole.company}</strong>
+              </span>
+            )}
+            <span className="social-divider" />
+            <ExternalLink href={profile.github} aria-label="GitHub profile">
+              <Github size={21} />
+            </ExternalLink>
+            <ExternalLink href={profile.linkedin} aria-label="LinkedIn profile">
+              <Linkedin size={21} />
+            </ExternalLink>
           </div>
         </div>
-
-        <div className="hero-visual" aria-hidden="true">
-          <div className="portrait-frame">
-            <img src={profilePhoto} alt="" loading="eager" />
-          </div>
+        <SystemDiagram />
+      </div>
+      <div className="impact-strip">
+        <div className="impact-label">
+          <span className="eyebrow">Production impact</span>
+          <span>{site.impact.source}</span>
         </div>
-      </section>
-    </main>
+        {site.impact.items.map((item) => (
+          <div key={item.label}>
+            <strong>
+              {item.value}
+              <span>{item.suffix}</span>
+            </strong>
+            <p>{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
