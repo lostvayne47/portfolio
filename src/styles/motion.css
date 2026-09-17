@@ -12,10 +12,12 @@
 @keyframes signal {
   0%,
   100% {
-    box-shadow: 0 0 0 3px #b6f26815;
+    opacity: 1;
+    transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 7px #b6f26806;
+    opacity: 0.65;
+    transform: scale(0.8);
   }
 }
 @keyframes trace {
@@ -25,31 +27,8 @@
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero-eyebrow,
-  .hero h1,
-  .hero-intro,
-  .hero-sub,
-  .hero-actions,
-  .hero-social {
-    animation: enter 0.65s var(--ease) backwards;
-  }
-  .hero h1 {
-    animation-delay: 0.06s;
-  }
-  .hero-intro {
-    animation-delay: 0.12s;
-  }
-  .hero-sub {
-    animation-delay: 0.16s;
-  }
-  .hero-actions {
-    animation-delay: 0.2s;
-  }
-  .hero-social {
-    animation-delay: 0.24s;
-  }
-  .system-card {
-    animation: enter 0.8s var(--ease) backwards;
-    animation-delay: 0.12s;
+  .nav-links.is-open {
+    animation: enter .4s var(--ease) backwards;
   }
   .status-dot {
     animation: signal 2.5s ease-in-out 3;

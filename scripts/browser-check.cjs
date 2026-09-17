@@ -77,15 +77,25 @@ let browser;
     "false",
   );
   await page.getByRole("button", { name: "Full stack", exact: true }).click();
-  assert.equal(await page.locator(".project-card").count(), projects.filter(p=>p.featured && p.groups.includes("full-stack")).length);
+  assert.equal(
+    await page.locator(".project-card").count(),
+    projects.filter((p) => p.featured && p.groups.includes("full-stack"))
+      .length,
+  );
   await page
     .getByRole("button", { name: "IoT & AI exploration", exact: true })
     .click();
   assert.equal(await page.locator(".project-card").count(), 2);
   await page.getByRole("button", { name: "All work", exact: true }).click();
-  assert.equal(await page.locator(".project-card").count(), projects.filter(p=>p.featured).length);
+  assert.equal(
+    await page.locator(".project-card").count(),
+    projects.filter((p) => p.featured).length,
+  );
   await page.locator(".project-archive summary").click();
-  assert.equal(await page.locator(".archive-grid article").count(), projects.filter(p=>!p.featured).length);
+  assert.equal(
+    await page.locator(".archive-grid article").count(),
+    projects.filter((p) => !p.featured).length,
+  );
   await page.locator(".credentials>details>summary").click();
   assert.equal(await page.locator(".credential").count(), certificates.length);
   for (const route of ["projects", "experience", "skills", "certifications"]) {

@@ -2,7 +2,9 @@ const fs = require("fs");
 const projects = require("../src/data/projects.json");
 const certificates = require("../src/data/certificates.json");
 const profile = require("../src/data/profile.json");
-const profileUrls = Object.values(profile).filter(value => typeof value === "string" && value.startsWith("https://"));
+const profileUrls = Object.values(profile).filter(
+  (value) => typeof value === "string" && value.startsWith("https://"),
+);
 const urls = [
   ...new Set([
     ...projects.map((r) => r.url),

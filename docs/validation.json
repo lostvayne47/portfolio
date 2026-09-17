@@ -3,12 +3,14 @@
   "lint": "Passed: ESLint, zero source warnings",
   "development": "Compiled successfully at http://localhost:3000",
   "browser": "Passed: 320, 390, 768, 1024, and 1440 px; no WCAG A/AA violations or browser console errors",
-  "interactions": "Passed: mobile menu, filters, project archive, all credentials, old deep links, keyboard skip link, reduced motion",
+  "interactions": "Passed: mobile menu, filters, project archive, all credentials, old deep links, keyboard skip link, reduced motion; card hover accent and lift; entrance motion; reduced-motion animation/transform checks; 16px mobile project body text",
   "assets": "Portrait loaded in browser; all 20 certificate URLs returned image responses; social preview generated locally",
   "links": "All project source and demo URLs and resume returned HTTP 200. Udemy/LeetCode returned 403; LinkedIn returned 999. These existing URLs are retained; automated verification could not establish their availability.",
   "unitTests": "The existing Jest command ran with --passWithNoTests; no unit tests exist. Browser interaction tests provide the functional validation.",
-  "metadata": "Production-host canonical URL, absolute social image, sitemap and robots reference passed an in-memory fixture test.",
+  "metadata": "Production-host canonical URL, absolute social image, sitemap and robots reference passed an in-memory fixture test. Profile edits also passed an in-memory sync test across title, descriptions, image alt, and noscript text.",
   "limitations": "Lighthouse is a local simulated mobile measurement, not field Core Web Vitals. Existing CRA dependencies emit stale Browserslist and development-server deprecation notices; the app compiles cleanly. Deployment was not performed.",
-  "bundle": "70.53 KB JavaScript + 6.72 KB CSS, gzipped",
-  "deployment": "Ready for the existing Vercel build pipeline; changes are local and uncommitted."
+  "bundle": "71.17 KB JavaScript + 8.97 KB CSS, gzipped",
+  "deployment": "Compatible with the existing Vercel build pipeline; no deployment performed.",
+  "content": "Content validator passed with real data and rejected invalid-link/missing-image fixtures without mutating files. Featured selections, current employer, education selection, and counts are data-driven.",
+  "performance": "Latest local simulated-mobile Lighthouse: 86 performance, 100 accessibility, 100 best practices, 100 SEO; LCP 2.5 s, CLS 0, TBT 470 ms. This is a local lab measurement, not field data."
 }

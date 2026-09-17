@@ -26,6 +26,8 @@ Cloud accuracy: AWS/Azure were existing skills; Docker/CI/CD are supported by em
 
 ## Implementation
 
-A continuous page, ivory/forest palette, system diagram, production metrics, project visuals, and professional timeline replace the old presentation. Native links, buttons, disclosures, visible focus, skip navigation, responsive layout, and reduced-motion support replace animation dependencies.
+A continuous page, deep navy/lime palette, system diagram, production metrics, project visuals, and professional timeline replace the old presentation. Native links, buttons, disclosures, visible focus, skip navigation, responsive layout, and reduced-motion support provide accessible interaction. CSS entrances, card lifts, and technical diagram motion add feedback without runtime animation dependencies.
 
 The original CRA build contract remains intact. Removed unused packages and obsolete components, eliminated token usage, and repaired the malformed HTML head. Deployment metadata derives from hosting environment variables instead of a guessed domain.
+
+Personal details and presentation copy are now centralized in JSON files, with a content validator and an editing guide. Typography was enlarged throughout, and hover/focus highlights were added across cards and links.

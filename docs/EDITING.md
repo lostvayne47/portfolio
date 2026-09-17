@@ -2,16 +2,16 @@
 
 Most updates only need JSON edits inside `src/data/`. You do not need to change React components.
 
-| What you want to change | File |
-| --- | --- |
-| Name, role, email, phone, social links, resume, portrait, about paragraphs | `src/data/profile.json` |
-| Hero headline, metrics, diagram labels, section headings, contact copy, SEO descriptions | `src/data/site.json` |
-| Projects, descriptions, tech stacks, demos, featured status and filter groups | `src/data/projects.json` |
-| Jobs, accomplishments, current employer, dates and education | `src/data/experience.json` |
-| Skill categories and technologies | `src/data/skills.json` |
-| Certificates, verification links, awards and featured status | `src/data/certificates.json` |
-| Theme colors and shared text sizes | `:root` in `src/index.css` |
-| Entrance and hover animations | `src/styles/motion.css` |
+| What you want to change                                                                  | File                         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- |
+| Name, role, email, phone, social links, resume, portrait, about paragraphs               | `src/data/profile.json`      |
+| Hero headline, metrics, diagram labels, section headings, contact copy, SEO descriptions | `src/data/site.json`         |
+| Projects, descriptions, tech stacks, demos, featured status and filter groups            | `src/data/projects.json`     |
+| Jobs, accomplishments, current employer, dates and education                             | `src/data/experience.json`   |
+| Skill categories and technologies                                                        | `src/data/skills.json`       |
+| Certificates, verification links, awards and featured status                             | `src/data/certificates.json` |
+| Theme colors and shared text sizes                                                       | `:root` in `src/index.css`   |
+| Entrance and hover animations                                                            | `src/styles/motion.css`      |
 
 ## Quick workflow
 

@@ -1,16 +1,16 @@
 {
   "mode": "Lighthouse simulated mobile, local production preview",
   "scores": {
-    "performance": 98,
+    "performance": 86,
     "accessibility": 100,
     "best-practices": 100,
     "seo": 100
   },
   "metrics": {
-    "first-contentful-paint": "0.9 s",
+    "first-contentful-paint": "1.1 s",
     "largest-contentful-paint": "2.5 s",
     "cumulative-layout-shift": "0",
-    "total-blocking-time": "20 ms"
+    "total-blocking-time": "470 ms"
   },
   "findings": [
     {
@@ -20,9 +20,15 @@
       "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
     },
     {
+      "id": "total-blocking-time",
+      "title": "Total Blocking Time",
+      "score": 0.61,
+      "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)."
+    },
+    {
       "id": "max-potential-fid",
       "title": "Max Potential First Input Delay",
-      "score": 0.36,
+      "score": 0.01,
       "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/)."
     },
     {
@@ -30,6 +36,63 @@
       "title": "Time to Interactive",
       "score": 0.98,
       "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+    },
+    {
+      "id": "mainthread-work-breakdown",
+      "title": "Minimize main-thread work",
+      "score": 0,
+      "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "groupLabel",
+            "valueType": "text",
+            "label": "Category"
+          },
+          {
+            "key": "duration",
+            "valueType": "ms",
+            "granularity": 1,
+            "label": "Time Spent"
+          }
+        ],
+        "items": [
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 1531.9599999999998
+          },
+          {
+            "group": "other",
+            "groupLabel": "Other",
+            "duration": 312.66000000000065
+          },
+          {
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation",
+            "duration": 277.96400000000034
+          },
+          {
+            "group": "paintCompositeRender",
+            "groupLabel": "Rendering",
+            "duration": 57.34400000000002
+          },
+          {
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 53.952000000000005
+          },
+          {
+            "group": "parseHTML",
+            "groupLabel": "Parse HTML & CSS",
+            "duration": 12.204
+          }
+        ],
+        "sortedBy": [
+          "duration"
+        ]
+      }
     },
     {
       "id": "uses-long-cache-ttl",
@@ -60,22 +123,22 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/js/main.df01302f.js",
+            "url": "http://127.0.0.1:4173/static/js/main.43738d39.js",
             "cacheLifetimeMs": 0,
             "cacheHitProbability": 0,
-            "totalBytes": 224602,
-            "wastedBytes": 224602
+            "totalBytes": 225832,
+            "wastedBytes": 225832
           },
           {
-            "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
+            "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
             "cacheLifetimeMs": 0,
             "cacheHitProbability": 0,
-            "totalBytes": 31168,
-            "wastedBytes": 31168
+            "totalBytes": 44869,
+            "wastedBytes": 44869
           }
         ],
         "summary": {
-          "wastedBytes": 255770
+          "wastedBytes": 270701
         },
         "sortedBy": [
           "totalBytes"
@@ -111,12 +174,12 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
-            "totalBytes": 31168,
-            "wastedMs": 301
+            "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
+            "totalBytes": 44869,
+            "wastedMs": 452
           }
         ],
-        "overallSavingsMs": 146
+        "overallSavingsMs": 142
       }
     },
     {
@@ -155,17 +218,17 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/js/main.df01302f.js",
-            "totalBytes": 224444,
-            "wastedBytes": 95267,
-            "wastedPercent": 42.44577712035073,
+            "url": "http://127.0.0.1:4173/static/js/main.43738d39.js",
+            "totalBytes": 225674,
+            "wastedBytes": 87386,
+            "wastedPercent": 38.722227638097436,
             "subItems": {
               "type": "subitems",
               "items": [
                 {
                   "source": "../node_modules/react-dom/cjs/react-dom-client.production.js",
                   "sourceBytes": 167635,
-                  "sourceWastedBytes": 86161
+                  "sourceWastedBytes": 78242
                 },
                 {
                   "source": "../node_modules/react/cjs/react.production.js",
@@ -186,8 +249,8 @@
             }
           }
         ],
-        "overallSavingsMs": 450,
-        "overallSavingsBytes": 95267,
+        "overallSavingsMs": 300,
+        "overallSavingsBytes": 87386,
         "sortedBy": [
           "wastedBytes"
         ],
@@ -195,7 +258,7 @@
           "type": "debugdata",
           "metricSavings": {
             "FCP": 0,
-            "LCP": 450
+            "LCP": 300
           }
         }
       }
@@ -226,25 +289,25 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/js/main.df01302f.js",
-            "totalBytes": 224444,
-            "wastedBytes": 153765
+            "url": "http://127.0.0.1:4173/static/js/main.43738d39.js",
+            "totalBytes": 225674,
+            "wastedBytes": 154353
           },
           {
-            "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
-            "totalBytes": 31018,
-            "wastedBytes": 24230
+            "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
+            "totalBytes": 44719,
+            "wastedBytes": 35667
           }
         ],
         "overallSavingsMs": 900,
-        "overallSavingsBytes": 177995,
+        "overallSavingsBytes": 190020,
         "sortedBy": [
           "wastedBytes"
         ],
         "debugData": {
           "type": "debugdata",
           "metricSavings": {
-            "FCP": 150,
+            "FCP": 300,
             "LCP": 900
           }
         }
@@ -253,7 +316,7 @@
     {
       "id": "dom-size",
       "title": "Avoid an excessive DOM size",
-      "score": 0.5,
+      "score": 0,
       "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
       "details": {
         "type": "table",
@@ -280,20 +343,20 @@
             "value": {
               "type": "numeric",
               "granularity": 1,
-              "value": 1026
+              "value": 1028
             }
           },
           {
             "node": {
               "type": "node",
-              "lhId": "1-84-path",
+              "lhId": "1-85-path",
               "path": "1,HTML,1,BODY,1,DIV,2,MAIN,1,SECTION,2,DIV,0,ARTICLE,1,DIV,5,DIV,1,DIV,0,A,0,svg,0,path",
               "selector": "div > a > svg.lucide > path",
               "boundingRect": {
-                "top": 2201,
-                "bottom": 2216,
-                "left": 323,
-                "right": 335,
+                "top": 2426,
+                "bottom": 2440,
+                "left": 310,
+                "right": 322,
                 "width": 11,
                 "height": 14
               },
@@ -310,16 +373,16 @@
           {
             "node": {
               "type": "node",
-              "lhId": "1-85-DETAILS",
+              "lhId": "1-86-DETAILS",
               "path": "1,HTML,1,BODY,1,DIV,2,MAIN,4,SECTION,1,DIV,1,DIV,6,DETAILS",
               "selector": "section#about > div.about-grid > div#certifications > details",
               "boundingRect": {
-                "top": 8136,
-                "bottom": 8173,
+                "top": 10460,
+                "bottom": 10504,
                 "left": 20,
                 "right": 392,
                 "width": 372,
-                "height": 37
+                "height": 44
               },
               "snippet": "<details>",
               "nodeLabel": "All credentials & awards\n20 total +"
@@ -363,16 +426,16 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/js/main.df01302f.js",
+            "url": "http://127.0.0.1:4173/static/js/main.43738d39.js",
             "cacheLifetimeMs": 0,
-            "totalBytes": 224602,
-            "wastedBytes": 224602
+            "totalBytes": 225832,
+            "wastedBytes": 225832
           },
           {
-            "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
+            "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
             "cacheLifetimeMs": 0,
-            "totalBytes": 31168,
-            "wastedBytes": 31168
+            "totalBytes": 44869,
+            "wastedBytes": 44869
           }
         ],
         "sortedBy": [
@@ -383,7 +446,7 @@
         ],
         "debugData": {
           "type": "debugdata",
-          "wastedBytes": 255770
+          "wastedBytes": 270701
         }
       }
     },
@@ -400,30 +463,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "3F00B0AD29BCED9933C47F2A25454D30": {
+                "4CD973DFEEA7327F353B4B77352347A2": {
                   "url": "http://127.0.0.1:4173/",
-                  "navStartToEndTime": 13,
-                  "transferSize": 1933,
+                  "navStartToEndTime": 29,
+                  "transferSize": 2126,
                   "isLongest": true,
                   "children": {
-                    "18280.6": {
+                    "15688.6": {
                       "url": "http://127.0.0.1:4173/manifest.json",
-                      "navStartToEndTime": 23,
+                      "navStartToEndTime": 52,
                       "transferSize": 476,
                       "isLongest": true,
                       "children": {}
                     },
-                    "18280.3": {
-                      "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
-                      "navStartToEndTime": 23,
-                      "transferSize": 31168,
+                    "15688.3": {
+                      "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
+                      "navStartToEndTime": 51,
+                      "transferSize": 44869,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 23
+                "duration": 52
               }
             }
           },
@@ -474,9 +537,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4173/static/css/main.623c43ad.css",
-            "totalBytes": 31168,
-            "wastedMs": 301
+            "url": "http://127.0.0.1:4173/static/css/main.2462de71.css",
+            "totalBytes": 44869,
+            "wastedMs": 452
           }
         ]
       }
