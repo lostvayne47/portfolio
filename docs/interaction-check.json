@@ -1,0 +1,14 @@
+{
+  "hover": {
+    "border": "rgb(182, 242, 104)",
+    "transform": "matrix(1, 0, 0, 1, 0, -6)"
+  },
+  "reduced": {
+    "animation": "none",
+    "transform": "none",
+    "scroll": "auto"
+  },
+  "mobileBodyFontSize": 16,
+  "entrances": "Triggered on scroll",
+  "keyboard": "Escape closes mobile navigation and returns focus"
+}

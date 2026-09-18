@@ -1,0 +1,166 @@
+[
+  {
+    "id": 1,
+    "name": "Bronze Award 1 - Honeywell",
+    "link": "",
+    "caption": "Performance Award",
+    "image": "/certificates/1.webp",
+    "featured": false,
+    "awardGroup": "honeywell-bronze"
+  },
+  {
+    "id": 2,
+    "name": "Bronze Award 2 - Honeywell",
+    "link": "",
+    "caption": "Performance Award",
+    "image": "/certificates/2.webp",
+    "featured": false,
+    "awardGroup": "honeywell-bronze"
+  },
+  {
+    "id": 3,
+    "name": "Bronze Award 3 - Honeywell",
+    "link": "",
+    "caption": "Performance Award",
+    "image": "/certificates/3.webp",
+    "featured": false,
+    "awardGroup": "honeywell-bronze"
+  },
+  {
+    "id": 4,
+    "name": "Bronze Award 4 - Honeywell",
+    "link": "",
+    "caption": "Performance Award",
+    "image": "/certificates/4.webp",
+    "featured": false,
+    "awardGroup": "honeywell-bronze"
+  },
+  {
+    "id": 5,
+    "name": "Tridium Niagara 4 Developer Certification",
+    "link": "https://www.tridiumuniversity.com/student/award/hfU46bDgkjY8gspwGLy7whvB",
+    "caption": "Professional Certification",
+    "image": "/certificates/5.webp",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "name": "Ingenious Hackathon Finalist",
+    "link": "",
+    "caption": "Hackathon Certificate",
+    "image": "/certificates/6.webp",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "The Ultimate React Course 2024",
+    "link": "https://www.udemy.com/certificate/UC-f2a4f13d-c4d7-40ad-a573-5dbdb22af268/",
+    "caption": "Online Course",
+    "image": "/certificates/7.webp",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "The Ultimate Javascript Course 2024",
+    "link": "https://www.udemy.com/certificate/UC-369a6624-2152-4a54-8fae-13a163158896/",
+    "caption": "Online Course",
+    "image": "/certificates/8.webp",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "Fundamentals of deep learning by NVIDIA",
+    "link": "https://learn.nvidia.com/certificates?id=aa516e9783ab47b1a994fd5bc1548486",
+    "caption": "Online Course",
+    "image": "/certificates/9.webp",
+    "featured": true
+  },
+  {
+    "id": 10,
+    "name": "Python complete course for beginners",
+    "link": "https://www.udemy.com/certificate/UC-e7f80016-f24f-4570-bee6-ff0086ff9dd5/",
+    "caption": "Online Course",
+    "image": "/certificates/10.webp",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "Artifical Intelligence in the Classroom",
+    "link": "https://www.udemy.com/certificate/UC-938226d2-8487-4b4b-864a-9229a9d520a0/",
+    "caption": "Online Course",
+    "image": "/certificates/11.webp",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "Android Oreo Course",
+    "link": "https://www.udemy.com/certificate/UC-4d6808ca-f73b-4aa1-9551-c4f178b50eca/",
+    "caption": "Online Course",
+    "image": "/certificates/12.webp",
+    "featured": false
+  },
+  {
+    "id": 13,
+    "name": "Software Engineer",
+    "link": "https://www.hackerrank.com/certificates/iframe/9449bb2f1eef",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/13.webp",
+    "featured": true
+  },
+  {
+    "id": 14,
+    "name": "Javascript (Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/bee9bf0d6a27",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/14.webp",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "name": "Javascript (Intermediate)",
+    "link": "https://www.hackerrank.com/certificates/iframe/9adc92820a63",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/15.webp",
+    "featured": false
+  },
+  {
+    "id": 16,
+    "name": "React (Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/6dea58d2a019",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/16.webp",
+    "featured": false
+  },
+  {
+    "id": 17,
+    "name": "Frontend Developer",
+    "link": "https://www.hackerrank.com/certificates/iframe/3f97ace938ef",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/17.webp",
+    "featured": false
+  },
+  {
+    "id": 18,
+    "name": "SQL(Basic)",
+    "link": "https://www.hackerrank.com/certificates/iframe/5a36e8d442b0",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/18.webp",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "name": "SQL(Intermediate)",
+    "link": "https://www.hackerrank.com/certificates/iframe/52b92c24fb15",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/19.webp",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "name": "SQL(Advanced)",
+    "link": "https://www.hackerrank.com/certificates/iframe/95c610586f41",
+    "caption": "Hackerrank Certificate",
+    "image": "/certificates/20.webp",
+    "featured": false
+  }
+]

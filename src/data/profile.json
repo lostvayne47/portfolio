@@ -1,0 +1,19 @@
+{
+  "name": "Aayush Kamtikar",
+  "email": "aayushkamtikar@gmail.com",
+  "phone": "+91 9921154704",
+  "github": "https://github.com/lostvayne47",
+  "linkedin": "https://www.linkedin.com/in/aayush-kamtikar/",
+  "leetcode": "https://leetcode.com/u/aayushkamtikar/",
+  "resume": "https://docs.google.com/document/d/1AZu1cXBu2xDnOtA3rwt70lLocL8EdsUiUuKZazk87D8/export?format=pdf",
+  "shortName": "Aayush",
+  "role": "Software Engineer",
+  "initials": "ak",
+  "tagline": "Software engineer. Lifelong learner.",
+  "portrait": "/portrait.webp",
+  "about": [
+    "My background in instrumentation and control shapes how I approach software: understand the system, follow the data, and make the pieces work together.",
+    "At Honeywell, that means backend services, secure device communication, and React dashboards. In my own projects, it means exploring useful applications and new ways to work with code."
+  ],
+  "personalNote": "Away from the keyboard, I explore new food for my mini food blog, meet new people, and spend time with my cat, Winter."
+}

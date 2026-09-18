@@ -7,22 +7,10 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.3",
-    "dompurify": "^3.2.4",
-    "framer-motion": "^12.23.19",
-    "infinite-scroll": "^4.0.1",
     "lucide-react": "^0.477.0",
     "react": "^19.0.0",
-    "react-context": "^0.0.3",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-infinite-scroll-component": "^6.1.0",
-    "react-router": "^7.2.0",
-    "react-router-dom": "^7.2.0",
-    "react-scripts": "5.0.1",
-    "react-vertical-timeline-component": "^3.5.3",
-    "sass": "^1.85.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
   },
   "overrides": {
     "react": "^19.0.0",
@@ -32,7 +20,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "node scripts/metadata.cjs",
+    "lint": "eslint src --max-warnings 0",
+    "preview": "node scripts/preview.cjs",
+    "check-content": "node scripts/check-content.cjs",
+    "prebuild": "npm run check-content && node scripts/sync-metadata.cjs",
+    "prestart": "npm run check-content && node scripts/sync-metadata.cjs"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://aayushkamtikar.netlify.app"
+  }
 }

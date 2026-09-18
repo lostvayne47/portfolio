@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Backend engineering",
+    "icon": "server",
+    "note": "The foundation",
+    "items": [
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "JPA",
+      "Node.js",
+      "Express",
+      "Concurrency"
+    ]
+  },
+  {
+    "title": "Frontend development",
+    "icon": "code",
+    "note": "The interface",
+    "items": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "Redux",
+      "React Query",
+      "HTML / CSS",
+      "Sass",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Figma"
+    ]
+  },
+  {
+    "title": "Databases",
+    "icon": "database",
+    "note": "The data layer",
+    "items": ["PostgreSQL", "MongoDB", "SQL", "Firebase"]
+  },
+  {
+    "title": "Cloud & delivery",
+    "icon": "cloud",
+    "note": "From code to production",
+    "items": [
+      "AWS",
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "Unit & integration testing",
+      "Vercel"
+    ]
+  },
+  {
+    "title": "IoT & industrial systems",
+    "icon": "network",
+    "note": "Beyond the browser",
+    "items": [
+      "Tridium Niagara",
+      "BACnet / BACnet SC",
+      "Modbus",
+      "MQTT",
+      "Panel Bus",
+      "Certificate lifecycle management"
+    ]
+  },
+  {
+    "title": "Tools & exploration",
+    "icon": "terminal",
+    "note": "Extending the toolkit",
+    "items": [
+      "Python",
+      "FastAPI",
+      "AST analysis",
+      "MCP proof of concept",
+      "C#",
+      "C++",
+      "DevExpress"
+    ]
+  }
+]

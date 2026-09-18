@@ -1,58 +1,88 @@
-import React, { useContext, useState } from "react";
-import ProjectItem from "./ProjectItem.js";
-import InfiniteScroll from "react-infinite-scroll-component";
-import portfolioContext from "../context/Context.js";
-import { Loader, RefreshCcw } from "lucide-react";
-
+import { useState } from "react";
+import { ArrowDown, ArrowUpRight, Github } from "lucide-react";
+import site from "../data/site.json";
+import { profile } from "../data/profile";
+import projects from "../data/projects.json";
+import { SectionHeading, Tags, ExternalLink, ArrowLink } from "./UI";
+import ProjectVisual from "./ProjectVisual";
 export default function Projects() {
-  const { githubData, loading } = useContext(portfolioContext);
-  const [retryKey, setRetryKey] = useState(0); // 🔄 Changing key forces re-render
-
-  const handleRetry = () => {
-    if (retryKey) {
-      console.log("Retrying");
-    }
-    setRetryKey((prev) => prev + 1); // 🔄 Increment key to re-render component
-  };
-
-  if (loading) return <Loader />;
+  const [filter, setFilter] = useState("all");
+  const featured = projects.filter((p) => p.featured);
+  const filtered = featured.filter(
+    (p) => filter === "all" || p.groups.includes(filter),
+  );
   return (
-    <>
-      <div
-        className="container d-flex flex-column justify-content-center my-5"
-        style={{ height: "100%" }}
-      >
-        <h1 className="text-center">Feel free to explore my work!</h1>
-        <div
-          className="container custom-scrollbar "
-          style={{
-            maxHeight: "85%",
-            overflowY: "auto",
-            padding: "15px",
-          }}
-        >
-          {githubData.length === 0 ? (
-            <>
-              <h2 className="text-center">NO PROJECTS YET</h2>
-              <h3 className="text-center" onClick={handleRetry}>
-                <RefreshCcw />
-              </h3>
-            </>
-          ) : (
-            <InfiniteScroll
-              dataLength={githubData.length} //This is important field to render the next data
+    <section className="section container" id="projects">
+      <SectionHeading {...site.sections.projects} />
+      <div className="project-toolbar">
+        <div className="filter-group" aria-label="Filter featured projects">
+          {site.projectFilters.map((f) => (
+            <button
+              key={f.id}
+              onClick={() => setFilter(f.id)}
+              aria-pressed={filter === f.id}
             >
-              <div className="container overflow-hidden">
-                <div className="row gap-4 justify-content-center">
-                  {githubData.map((data) => {
-                    return <ProjectItem key={data.id} data={data} />;
-                  })}
+              {f.label}
+            </button>
+          ))}
+        </div>
+        <ArrowLink href={profile.github}>GitHub profile</ArrowLink>
+      </div>
+      <div className="project-grid" aria-live="polite">
+        {filtered.map((p) => (
+          <article className="project-card" key={p.slug}>
+            <ProjectVisual kind={p.kind} />
+            <div className="project-content">
+              <p className="eyebrow">{p.category}</p>
+              <h3>{p.title}</h3>
+              <p className="project-description">{p.description}</p>
+              <p className="project-contribution">{p.contribution}</p>
+              <Tags items={p.stack} />
+              <div className="project-bottom">
+                <span>{p.status}</span>
+                <div>
+                  <ExternalLink
+                    href={p.url}
+                    aria-label={"Code for " + p.title + " on GitHub"}
+                  >
+                    <Github size={17} /> Code
+                  </ExternalLink>
+                  {p.demo && (
+                    <ExternalLink
+                      href={p.demo}
+                      aria-label={"Open " + p.title + " live demo"}
+                    >
+                      Live <ArrowUpRight size={17} />
+                    </ExternalLink>
+                  )}
                 </div>
               </div>
-            </InfiniteScroll>
-          )}
-        </div>
+            </div>
+          </article>
+        ))}
       </div>
-    </>
+      <details className="project-archive">
+        <summary>
+          More projects{" "}
+          <span>
+            {projects.length - featured.length} projects <ArrowDown size={17} />
+          </span>
+        </summary>
+        <div className="archive-grid">
+          {projects
+            .filter((p) => !p.featured)
+            .map((p) => (
+              <article key={p.slug}>
+                <h3>
+                  <ArrowLink href={p.url}>{p.title}</ArrowLink>
+                </h3>
+                <p>{p.description}</p>
+                <Tags items={p.stack} />
+                {p.demo && <ArrowLink href={p.demo}>Live demo</ArrowLink>}
+              </article>
+            ))}
+        </div>
+      </details>
+    </section>
   );
 }

@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+﻿# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aayush Kamtikar’s portfolio, built with React 19, the existing Create React App pipeline, Lucide icons, and CSS. No browser-side API requests, access tokens, remote fonts, or UI framework styles are required.
 
-## Available Scripts
+## Development
 
-In the project directory, you can run:
+- `npm ci`: install locked dependencies.
+- `npm start`: development server.
+- `npm run lint`: React ESLint checks, with zero warnings allowed.
+- `npm run build`: production build plus deployment metadata generation.
+- `npm run preview`: serve the production build at http://127.0.0.1:4173.
 
-### `npm start`
+Use `npm.cmd` on Windows if PowerShell script execution is disabled.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+See [the editing guide](docs/EDITING.md) for field-by-field instructions. All personal content lives in `src/data/*.json`: profile, site copy, projects, experience, skills, and certificates. No component changes are needed for routine updates. `npm run check-content` validates edits, and runs automatically before builds. Page titles and SEO descriptions sync from profile/site data.
 
-### `npm test`
+Dark theme and typography tokens live at the top of `src/index.css`; decorative motion lives in `src/styles/motion.css`. The code mapper README describes LLM summaries as future work; Niagara MCP is a proof of concept. Preserve those distinctions when editing copy.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Vercel
 
-### `npm run build`
+Keep the Create React App preset, `npm run build`, and `build` output directory. `vercel.json` preserves the four original deep links, which forward to their corresponding sections. The old Netlify homepage setting was removed so assets resolve on the current host. The existing Netlify fallback remains.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Vercel’s `VERCEL_PROJECT_PRODUCTION_URL` supplies the production hostname. For a custom domain, set `REACT_APP_SITE_URL` to its HTTPS origin. `scripts/metadata.cjs` writes absolute social image URLs, canonical/OpenGraph URLs, a sitemap, and the robots sitemap reference. Local builds omit domain-specific metadata rather than inventing a production URL.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The old GitHub environment variables are no longer read. Remove unused deployment secrets; if a prior client bundle contained a real PAT, revoke that old token in GitHub.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Validation
 
-### `npm run eject`
+See `docs/audit.md`, `docs/browser-check.json`, and `docs/link-check.json`. HTTP success confirms reachability, not every remote app’s backend behavior. Some third parties block automated requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Browser checks use Playwright and axe, installed outside the app. Install `playwright` and `@axe-core/playwright` in a tools directory and set `PORTFOLIO_QA_DEPS` to its node_modules. Run `node scripts/browser-check.cjs` while preview is running. The script defaults to the temporary validation directory and Windows Chrome; `CHROME_PATH` overrides the browser location. It checks five viewport sizes, accessibility, navigation, filters, disclosures, legacy routes, reduced motion, images, and console errors. Screenshots/results are saved under `docs/`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`node scripts/check-links.cjs` rechecks all published external destinations.
