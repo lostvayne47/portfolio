@@ -542,6 +542,7 @@ h4 {
   color: #bdcfd3;
 }
 .project-bottom {
+  margin-top: auto;
   padding: 17px 0;
   border-top: 1px solid var(--line);
   display: flex;
@@ -556,6 +557,19 @@ h4 {
 .project-bottom > div {
   display: flex;
   gap: 17px;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 17px;
+}
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.project-links a:hover {
+  color: var(--accent);
 }
 .project-bottom a {
   display: flex;
@@ -826,6 +840,8 @@ details[open] > summary > span > svg {
   padding: 10px 0 30px;
 }
 .archive-grid article {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--line);
   padding-top: 20px;
 }
@@ -833,7 +849,11 @@ details[open] > summary > span > svg {
   margin-bottom: 10px;
 }
 .archive-grid .tags {
-  margin-bottom: 12px;
+  margin-bottom: 0;
+}
+.archive-footer {
+  margin-top: auto;
+  padding-top: 12px;
 }
 .experience-section {
   background: var(--surface-soft);
@@ -2049,9 +2069,6 @@ h2 {
   display: flex;
   flex-direction: column;
   flex: 1;
-}
-.project-content .tags {
-  margin-top: auto;
 }
 .project-visual {
   flex-shrink: 0;

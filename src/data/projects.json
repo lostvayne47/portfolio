@@ -52,18 +52,22 @@
     "kind": "warranty",
     "contribution": "Brings warranty tracking, reports, and notification workflows into a single web application.",
     "status": "Web application",
-    "featured": true,
+    "featured": false,
     "groups": ["full-stack"]
   },
   {
     "slug": "Advanced-Warranty-Tracker",
     "title": "Advanced Warranty Tracker",
-    "description": "Source code available on GitHub.",
+    "description": "Manage product warranties and private invoices, with AI-assisted invoice parsing and a dashboard for tracking coverage.",
     "url": "https://github.com/lostvayne47/Advanced-Warranty-Tracker",
-    "demo": "",
-    "stack": ["JavaScript"],
-    "featured": false,
-    "groups": []
+    "demo": "https://warranty-tracker-1e4g.onrender.com/",
+    "stack": ["React", "Spring Boot", "Supabase", "Gemini"],
+    "category": "Full-stack application",
+    "kind": "warranty",
+    "contribution": "Connects a React interface to a Spring Boot API for account-scoped warranties, private invoice storage, and reviewable Gemini extraction.",
+    "status": "Web application",
+    "featured": true,
+    "groups": ["full-stack"]
   },
   {
     "slug": "Animations",

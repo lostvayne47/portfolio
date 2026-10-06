@@ -5,6 +5,26 @@ import { profile } from "../data/profile";
 import projects from "../data/projects.json";
 import { SectionHeading, Tags, ExternalLink, ArrowLink } from "./UI";
 import ProjectVisual from "./ProjectVisual";
+function ProjectLinks({ project }) {
+  return (
+    <div className="project-links">
+      <ExternalLink
+        href={project.url}
+        aria-label={"Code for " + project.title + " on GitHub"}
+      >
+        <Github size={17} aria-hidden="true" /> GitHub
+      </ExternalLink>
+      {project.demo && (
+        <ExternalLink
+          href={project.demo}
+          aria-label={"Open " + project.title + " live site"}
+        >
+          Live site <ArrowUpRight size={17} aria-hidden="true" />
+        </ExternalLink>
+      )}
+    </div>
+  );
+}
 export default function Projects() {
   const [filter, setFilter] = useState("all");
   const featured = projects.filter((p) => p.featured);
@@ -38,25 +58,10 @@ export default function Projects() {
               <p className="project-description">{p.description}</p>
               <p className="project-contribution">{p.contribution}</p>
               <Tags items={p.stack} />
-              <div className="project-bottom">
+              <footer className="project-bottom">
                 <span>{p.status}</span>
-                <div>
-                  <ExternalLink
-                    href={p.url}
-                    aria-label={"Code for " + p.title + " on GitHub"}
-                  >
-                    <Github size={17} /> Code
-                  </ExternalLink>
-                  {p.demo && (
-                    <ExternalLink
-                      href={p.demo}
-                      aria-label={"Open " + p.title + " live demo"}
-                    >
-                      Live <ArrowUpRight size={17} />
-                    </ExternalLink>
-                  )}
-                </div>
-              </div>
+                <ProjectLinks project={p} />
+              </footer>
             </div>
           </article>
         ))}
@@ -78,7 +83,9 @@ export default function Projects() {
                 </h3>
                 <p>{p.description}</p>
                 <Tags items={p.stack} />
-                {p.demo && <ArrowLink href={p.demo}>Live demo</ArrowLink>}
+                <footer className="archive-footer">
+                  <ProjectLinks project={p} />
+                </footer>
               </article>
             ))}
         </div>
